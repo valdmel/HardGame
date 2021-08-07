@@ -3,8 +3,6 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     #region VARIABLES
-    private const string LEVEL_WALLS_TAG = "Level";
-
     #region SERIALIZABLE
     [Header("Bomb Properties")]
     [SerializeField] private BombData bombData;
@@ -28,9 +26,7 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var isTouchingLevelWalls = other.CompareTag(LEVEL_WALLS_TAG);
-
-        if (isTouchingLevelWalls)
+        if (other.WasWithLevelWalls())
         {
             InvertMoveSpeed();
         }
