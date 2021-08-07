@@ -38,7 +38,7 @@ public class Bomb : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    public void AddVelocity() => transform.Translate(new Vector3(moveDirection.x * moveSpeed, Vector3.zero.y, moveDirection.z * moveSpeed));
+    private void AddVelocity() => transform.Translate(new Vector3(moveDirection.x * moveSpeed, Vector3.zero.y, moveDirection.z * moveSpeed));
 
     private void InvertMoveSpeed() => moveSpeed = -moveSpeed;
     #endregion
