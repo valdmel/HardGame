@@ -125,4 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d44e4bdb475b32409ed3e05f9e894ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
+  bombData: {fileID: 11400000, guid: 35ca0566a9815a544b6183c3605351db, type: 2}
