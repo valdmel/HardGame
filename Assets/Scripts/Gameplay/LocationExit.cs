@@ -19,9 +19,9 @@ public class LocationExit : MonoBehaviour
 
         if (isTouchingPlayerBody)
         {
-            var playerBodyObject = other.gameObject.GetComponent<PlayerBody>();
+            var playerController = other.gameObject.GetComponent<PlayerController>();
 
-            playerBodyObject.DisableMovement();
+            playerController.DisableMovement();
             FinishLevel();
         }
     }

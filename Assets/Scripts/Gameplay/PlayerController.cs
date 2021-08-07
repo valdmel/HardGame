@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
         movementDirection = new Vector3(inputMovement.x, 0, inputMovement.y) * moveSpeed;
     }
 
+    public void DisableMovement() => playerInput.enabled = false;
+
     private void AddVelocity() => characterController.SimpleMove(movementDirection);
     #endregion
 }
