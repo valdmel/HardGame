@@ -5,6 +5,8 @@ public class PlayerBody : MonoBehaviour
 {
     #region VARIABLES
     private const string BOMB_TAG = "Bomb";
+
+    public static Action OnPlayerDeath;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -23,7 +25,8 @@ public class PlayerBody : MonoBehaviour
     #region CLASS METHODS
     private void Kill()
     {
-        throw new NotImplementedException();
+        OnPlayerDeath?.Invoke();
+        Destroy(gameObject.transform.parent.gameObject);
     }
     #endregion
 }
