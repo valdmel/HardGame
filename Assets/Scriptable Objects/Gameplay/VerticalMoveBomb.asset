@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4341faf1e51dda40a14ae0d64eadf68, type: 3}
-  m_Name: HorizontalBomb
+  m_Name: VerticalMoveBomb
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
-  moveDirection: {x: 1, y: 0, z: 0}
+  moveDirection: {x: 0, y: 0, z: 1}

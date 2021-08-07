@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9082958340067188936}
   m_Layer: 0
   m_Name: RedBomb
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,4 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d44e4bdb475b32409ed3e05f9e894ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombData: {fileID: 11400000, guid: 35ca0566a9815a544b6183c3605351db, type: 2}
+  bombData: {fileID: 11400000, guid: 1a0b44c55a5a7ee4689451da728124a2, type: 2}
