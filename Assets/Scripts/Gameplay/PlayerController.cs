@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    #region VARIABLES
     #region SERIALIZABLE
     [Header("Player Properties")]
     [SerializeField] private float moveSpeed = 5f;
@@ -13,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private PlayerInput playerInput;
     private Vector3 movementDirection;
+    #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Awake()
