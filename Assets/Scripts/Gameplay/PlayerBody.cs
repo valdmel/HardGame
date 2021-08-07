@@ -10,7 +10,9 @@ public class PlayerBody : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(BOMB_TAG))
+        var isTouchingBomb = other.CompareTag(BOMB_TAG);
+
+        if (isTouchingBomb)
         {
             Kill();
         }
