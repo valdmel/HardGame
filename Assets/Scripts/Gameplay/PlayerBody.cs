@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerBody : MonoBehaviour
 {
@@ -10,6 +11,16 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
+    private void OnEnable()
+    {
+        
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         var isTouchingBomb = other.CompareTag(BOMB_TAG);
@@ -18,11 +29,16 @@ public class PlayerBody : MonoBehaviour
         {
             Kill();
         }
-            
     }
     #endregion
 
     #region CLASS METHODS
+    public void DisableMovement()
+    {
+        var playerInput = gameObject.GetComponent<PlayerInput>();
+        playerInput.enabled = false;
+    }
+
     private void Kill()
     {
         OnPlayerDeath?.Invoke();

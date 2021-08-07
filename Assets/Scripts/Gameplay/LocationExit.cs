@@ -8,7 +8,7 @@ public class LocationExit : MonoBehaviour
 
     #region SERIALIZABLE
     [Header("Events Properties")]
-    [SerializeField] private UnityEvent OnLevelFinish;
+    [SerializeField] private UnityEvent onLevelFinish;
     #endregion
     #endregion
 
@@ -19,6 +19,9 @@ public class LocationExit : MonoBehaviour
 
         if (isTouchingPlayerBody)
         {
+            var playerBodyObject = other.gameObject.GetComponent<PlayerBody>();
+
+            playerBodyObject.DisableMovement();
             FinishLevel();
         }
     }
@@ -27,7 +30,7 @@ public class LocationExit : MonoBehaviour
     #region CLASS METHODS
     private void FinishLevel()
     {
-        OnLevelFinish?.Invoke();
+        onLevelFinish?.Invoke();
     }
     #endregion
 }

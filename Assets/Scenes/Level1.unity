@@ -7209,11 +7209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000013256526
+      value: 0.0000025764436
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000009388829
+      value: -0.0000018247449
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7360,10 +7360,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458520234}
     m_Modifications:
-    - target: {fileID: 372511961, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
-      propertyPath: OnLevelFinish.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8228566630657560112, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
       propertyPath: m_Mesh
       value: 

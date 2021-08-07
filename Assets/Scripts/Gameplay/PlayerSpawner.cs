@@ -7,8 +7,6 @@ using UnityEngine;
 public class PlayerSpawner : MonoBehaviour
 {
     #region VARIABLES
-    private const string LEVEL_WALLS_TAG = "Level";
-
     #region SERIALIZABLE
     [Header("Spawner Properties")]
     [SerializeField] private GameObject playerObjectToSpawn;
@@ -18,10 +16,7 @@ public class PlayerSpawner : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnEnable() => PlayerBody.OnPlayerDeath += SpawnPlayer;
 
-    private void Start()
-    {
-        SpawnPlayer();
-    }
+    private void Start() => SpawnPlayer();
 
     private void OnDisable() => PlayerBody.OnPlayerDeath -= SpawnPlayer;
     #endregion
