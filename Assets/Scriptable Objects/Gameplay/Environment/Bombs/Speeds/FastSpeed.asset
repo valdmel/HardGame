@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4341faf1e51dda40a14ae0d64eadf68, type: 3}
-  m_Name: HorizontalMoveBomb
+  m_Script: {fileID: 11500000, guid: 57d0477ad692be74f80a6a7b0dd8c1c2, type: 3}
+  m_Name: FastSpeed
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  moveDirection: {x: 1, y: 0, z: 0}
+  moveSpeed: 1

@@ -3,23 +3,25 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     #region VARIABLES
+    private const int INVERTED_SPEED_MULTIPLIER = -1;
+
     #region SERIALIZABLE
     [Header("Bomb Properties")]
-    [SerializeField] private BombData bombData;
+    [SerializeField] private BombDirection bombDirection;
+    [SerializeField] private BombSpeed bombSpeed;
+    [SerializeField] private bool invertSpeed;
     #endregion
 
     private float moveSpeed;
     private Vector3 moveDirection;
-    private Rigidbody rigidbody;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Awake() => rigidbody = GetComponent<Rigidbody>();
 
     private void Start()
     {
-        moveSpeed = bombData.MoveSpeed;
-        moveDirection = bombData.MoveDirection;
+        moveSpeed = invertSpeed ? bombSpeed.MoveSpeed : bombSpeed.MoveSpeed * INVERTED_SPEED_MULTIPLIER;
+        moveDirection = bombDirection.MoveDirection;
     }
 
     private void FixedUpdate() => AddVelocity();
