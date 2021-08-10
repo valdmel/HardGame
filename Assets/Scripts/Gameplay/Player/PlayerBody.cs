@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerBody : MonoBehaviour
 {
@@ -9,6 +8,11 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
+    private void Start()
+    {
+        GameManager.Instance.InitTimer();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.WasWithBomb())
