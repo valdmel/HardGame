@@ -9,13 +9,18 @@ public class GameManager : Singleton<GameManager>
     private const float DECREASING_TIME_IN_SECONDS = 1f;
     private const int MAX_MINUTES = 60;
     private const int STARTING_TIME = 0;
+    private const float GAME_DEFAULT_TIMESCALE = 1f;
 
+    public static Action OnGamePause;
     public static Action<string> OnDeathCounterChange;
     public static Action<string> OnTimeChange;
 
+    private bool isGamePaused = false;
     private int deathCounter = 0;
     private int seconds;
     private Coroutine timerCoroutine;
+
+    public bool IsGamePaused { get => isGamePaused; private set => isGamePaused = value; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -36,6 +41,15 @@ public class GameManager : Singleton<GameManager>
         StopCoroutine(timerCoroutine);
 
         timerCoroutine = null;
+    }
+
+    public void PauseGame()
+    {
+        var pauseTimeScale = GAME_DEFAULT_TIMESCALE - Time.timeScale;
+        isGamePaused = !isGamePaused;
+
+        OnGamePause?.Invoke();
+        Time.timeScale = pauseTimeScale;
     }
 
     private IEnumerator StartTimer()

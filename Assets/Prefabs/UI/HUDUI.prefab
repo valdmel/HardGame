@@ -464,6 +464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2069906498914987530}
+  - component: {fileID: 617353947338400140}
   m_Layer: 0
   m_Name: HUDUI
   m_TagString: Untagged
@@ -486,6 +487,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617353947338400140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6408063296755396564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6625736267022e4468d69807afb9bbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathCounterText: {fileID: 555116125}
+  timerText: {fileID: 1211540206}
 --- !u!1 &8359988919246500602
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +513,6 @@ GameObject:
   - component: {fileID: 8359988919246500551}
   - component: {fileID: 8359988919246500600}
   - component: {fileID: 8359988919246500601}
-  - component: {fileID: 729247015}
   m_Layer: 5
   m_Name: HUDCanvas
   m_TagString: Untagged
@@ -588,20 +602,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &729247015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359988919246500602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6625736267022e4468d69807afb9bbfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathCounterText: {fileID: 555116125}
-  timerText: {fileID: 1211540206}
 --- !u!1 &8789822864697168581
 GameObject:
   m_ObjectHideFlags: 0
