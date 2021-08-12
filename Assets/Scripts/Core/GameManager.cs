@@ -10,10 +10,18 @@ public class GameManager : Singleton<GameManager>
     private const int MAX_MINUTES = 60;
     private const int STARTING_TIME = 0;
 
+    public static Action<string> OnDeathCounterChange;
     public static Action<string> OnTimeChange;
 
+    private int deathCounter = 0;
     private int seconds;
     private Coroutine timerCoroutine;
+    #endregion
+
+    #region MONOBEHAVIOUR CALLBACK METHODS
+    private void OnEnable() => PlayerBody.OnPlayerDeath += UpdateDeathCounter;
+
+    private void OnDisable() => PlayerBody.OnPlayerDeath -= UpdateDeathCounter;
     #endregion
 
     #region CLASS METHODS
@@ -44,6 +52,13 @@ public class GameManager : Singleton<GameManager>
         }
 
         StopTimer();
+    }
+
+    private void UpdateDeathCounter()
+    {
+        ++deathCounter;
+
+        OnDeathCounterChange?.Invoke(deathCounter.ToString());
     }
 
     private string ConvertSeconds(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TIMESPAN_PATTERN);
