@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -15,6 +14,7 @@ public class GameManager : Singleton<GameManager>
     public static Action onGamePause;
     public static Action<string> onDeathCounterChange;
     public static Action<string> onTimeChange;
+    public static Action OnTimeMax;
 
     private bool isGamePaused = false;
     private int deathCounter = 0;
@@ -22,18 +22,13 @@ public class GameManager : Singleton<GameManager>
     private Coroutine timerCoroutine;
 
     public bool IsGamePaused { get => isGamePaused; private set => isGamePaused = value; }
+    public int DeathCounter { get => deathCounter; private set => deathCounter = value; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable()
-    {
-        PlayerBody.onPlayerDeath += UpdateDeathCounter;
-    }
+    private void OnEnable() => PlayerBody.onPlayerDeath += OnDeath;
 
-    private void OnDisable()
-    {
-        PlayerBody.onPlayerDeath -= UpdateDeathCounter;
-    }
+    private void OnDisable() => PlayerBody.onPlayerDeath -= OnDeath;
     #endregion
 
     #region CLASS METHODS
@@ -72,7 +67,13 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(DECREASING_TIME_IN_SECONDS);
         }
 
+        OnTimeMax?.Invoke();
+    }
+
+    private void OnDeath()
+    {
         StopTimer();
+        UpdateDeathCounter();
     }
 
     private void UpdateDeathCounter() => onDeathCounterChange?.Invoke((++deathCounter).ToString());

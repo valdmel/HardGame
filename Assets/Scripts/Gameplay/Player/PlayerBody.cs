@@ -8,7 +8,11 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
+    private void OnEnable() => GameManager.OnTimeMax += Kill;
+
     private void Start() => GameManager.Instance.InitTimer();
+
+    private void OnDisable() => GameManager.OnTimeMax -= Kill;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,7 +28,7 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    private void Kill()
+    public void Kill()
     {
         onPlayerDeath?.Invoke();
         transform.parent.gameObject.SetActive(false);
