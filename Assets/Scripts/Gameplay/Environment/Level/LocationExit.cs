@@ -26,7 +26,7 @@ public class LocationExit : MonoBehaviour
     #region CLASS METHODS
     private void FinishLevel()
     {
-        GameManager.Instance.StopTimer();
+        GameManager.Instance.StopTime();
         onLevelFinish?.Invoke();
     }
     #endregion

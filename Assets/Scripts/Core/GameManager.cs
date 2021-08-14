@@ -18,7 +18,7 @@ public class GameManager : Singleton<GameManager>
 
     private bool isGamePaused = false;
     private int deathCounter = 0;
-    private int seconds;
+    private int timeInSeconds;
     private Coroutine timerCoroutine;
 
     public bool IsGamePaused { get => isGamePaused; private set => isGamePaused = value; }
@@ -32,13 +32,13 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region CLASS METHODS
-    public void InitTimer()
+    public void InitTime()
     {
-        seconds = STARTING_TIME;
-        timerCoroutine = StartCoroutine(StartTimer());
+        timeInSeconds = STARTING_TIME;
+        timerCoroutine = StartCoroutine(StartTime());
     }
 
-    public void StopTimer()
+    public void StopTime()
     {
         StopCoroutine(timerCoroutine);
 
@@ -54,15 +54,15 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = pauseTimeScale;
     }
 
-    private IEnumerator StartTimer()
+    private IEnumerator StartTime()
     {
-        var minutesFromSeconds = TimeSpan.FromSeconds(seconds).Minutes;
+        var minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
 
         while (minutesFromSeconds <= MAX_MINUTES)
         {
-            onTimeChange?.Invoke(ConvertSeconds(++seconds));
+            onTimeChange?.Invoke(TimeInSecondsToString(++timeInSeconds));
 
-            minutesFromSeconds = TimeSpan.FromSeconds(seconds).Minutes;
+            minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
 
             yield return new WaitForSeconds(DECREASING_TIME_IN_SECONDS);
         }
@@ -72,12 +72,12 @@ public class GameManager : Singleton<GameManager>
 
     private void OnDeath()
     {
-        StopTimer();
+        StopTime();
         UpdateDeathCounter();
     }
 
     private void UpdateDeathCounter() => onDeathCounterChange?.Invoke((++deathCounter).ToString());
 
-    private string ConvertSeconds(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TIMESPAN_PATTERN);
+    private string TimeInSecondsToString(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TIMESPAN_PATTERN);
     #endregion
 }
