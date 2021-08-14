@@ -26,6 +26,7 @@ public class LocationExit : MonoBehaviour
     #region CLASS METHODS
     private void FinishLevel()
     {
+        GameManager.Instance.LoadNextScene();
         onLevelFinish?.Invoke();
     }
     #endregion

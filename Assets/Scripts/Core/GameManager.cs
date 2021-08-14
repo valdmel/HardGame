@@ -1,15 +1,17 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
     #region VARIABLES
     private const string TIMESPAN_PATTERN = @"mm\:ss";
-    private const float DECREASING_TIME_IN_SECONDS = 1f;
     private const int MAX_MINUTES = 60;
     private const int STARTING_TIME = 0;
+    private const int SCENE_LOADING_TIME = 1;
     private const float GAME_DEFAULT_TIMESCALE = 1f;
+    private const float DECREASING_TIME_IN_SECONDS = 1f;
 
     public static Action OnGamePause;
     public static Action<string> OnDeathCounterChange;
@@ -20,6 +22,9 @@ public class GameManager : Singleton<GameManager>
     private int seconds;
     private Coroutine timerCoroutine;
 
+    public int CurrentSceneIndex => SceneManager.GetActiveScene().buildIndex;
+    public int NextSceneIndex => CurrentSceneIndex + 1;
+    public int PreviousSceneIndex => CurrentSceneIndex - 1;
     public bool IsGamePaused { get => isGamePaused; private set => isGamePaused = value; }
     #endregion
 
@@ -50,6 +55,15 @@ public class GameManager : Singleton<GameManager>
 
         OnGamePause?.Invoke();
         Time.timeScale = pauseTimeScale;
+    }
+
+    public void LoadNextScene() => StartCoroutine(LoadScene(NextSceneIndex));
+
+    private IEnumerator LoadScene(int sceneIndexToLoad)
+    {
+        yield return new WaitForSeconds(SCENE_LOADING_TIME);
+
+        SceneManager.LoadScene(sceneIndexToLoad);
     }
 
     private IEnumerator StartTimer()
