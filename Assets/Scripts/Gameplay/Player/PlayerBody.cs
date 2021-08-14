@@ -8,16 +8,18 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Start()
-    {
-        GameManager.Instance.InitTimer();
-    }
+    private void Start() => GameManager.Instance.InitTimer();
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.WasWithBomb())
         {
             Kill();
+        }
+        else if (other.WasWithSuperBomb())
+        {
+            Kill();
+            GameManager.Instance.LoadPreviousScene();
         }
     }
     #endregion

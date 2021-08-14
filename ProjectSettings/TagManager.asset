@@ -7,6 +7,7 @@ TagManager:
   - Level
   - PlayerBody
   - Bomb
+  - SuperBomb
   layers:
   - Default
   - TransparentFX

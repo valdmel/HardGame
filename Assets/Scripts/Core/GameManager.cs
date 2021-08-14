@@ -59,6 +59,8 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadNextScene() => StartCoroutine(LoadScene(NextSceneIndex));
 
+    public void LoadPreviousScene() => StartCoroutine(LoadScene(PreviousSceneIndex));
+
     private IEnumerator LoadScene(int sceneIndexToLoad)
     {
         yield return new WaitForSeconds(SCENE_LOADING_TIME);
