@@ -9,29 +9,31 @@ public class GameManager : Singleton<GameManager>
     private const string TIMESPAN_PATTERN = @"mm\:ss";
     private const int MAX_MINUTES = 60;
     private const int STARTING_TIME = 0;
-    private const int SCENE_LOADING_TIME = 1;
     private const float GAME_DEFAULT_TIMESCALE = 1f;
     private const float DECREASING_TIME_IN_SECONDS = 1f;
 
-    public static Action OnGamePause;
-    public static Action<string> OnDeathCounterChange;
-    public static Action<string> OnTimeChange;
+    public static Action onGamePause;
+    public static Action<string> onDeathCounterChange;
+    public static Action<string> onTimeChange;
 
     private bool isGamePaused = false;
     private int deathCounter = 0;
     private int seconds;
     private Coroutine timerCoroutine;
 
-    public int CurrentSceneIndex => SceneManager.GetActiveScene().buildIndex;
-    public int NextSceneIndex => CurrentSceneIndex + 1;
-    public int PreviousSceneIndex => CurrentSceneIndex - 1;
     public bool IsGamePaused { get => isGamePaused; private set => isGamePaused = value; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => PlayerBody.OnPlayerDeath += UpdateDeathCounter;
+    private void OnEnable()
+    {
+        PlayerBody.onPlayerDeath += UpdateDeathCounter;
+    }
 
-    private void OnDisable() => PlayerBody.OnPlayerDeath -= UpdateDeathCounter;
+    private void OnDisable()
+    {
+        PlayerBody.onPlayerDeath -= UpdateDeathCounter;
+    }
     #endregion
 
     #region CLASS METHODS
@@ -53,7 +55,7 @@ public class GameManager : Singleton<GameManager>
         var pauseTimeScale = GAME_DEFAULT_TIMESCALE - Time.timeScale;
         isGamePaused = !isGamePaused;
 
-        OnGamePause?.Invoke();
+        onGamePause?.Invoke();
         Time.timeScale = pauseTimeScale;
     }
 
@@ -63,7 +65,7 @@ public class GameManager : Singleton<GameManager>
 
         while (minutesFromSeconds <= MAX_MINUTES)
         {
-            OnTimeChange?.Invoke(ConvertSeconds(++seconds));
+            onTimeChange?.Invoke(ConvertSeconds(++seconds));
 
             minutesFromSeconds = TimeSpan.FromSeconds(seconds).Minutes;
 
@@ -73,12 +75,7 @@ public class GameManager : Singleton<GameManager>
         StopTimer();
     }
 
-    private void UpdateDeathCounter()
-    {
-        ++deathCounter;
-
-        OnDeathCounterChange?.Invoke(deathCounter.ToString());
-    }
+    private void UpdateDeathCounter() => onDeathCounterChange?.Invoke((++deathCounter).ToString());
 
     private string ConvertSeconds(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TIMESPAN_PATTERN);
     #endregion

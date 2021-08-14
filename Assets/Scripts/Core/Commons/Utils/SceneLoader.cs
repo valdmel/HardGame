@@ -16,19 +16,17 @@ public class SceneLoader : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable()
-    {
+    private void OnEnable() => PlayerBody.onPlayerDeath += RestartScene;
 
-    }
-
-    private void OnDisable()
-    {
-
-    }
+    private void OnDisable() => PlayerBody.onPlayerDeath -= RestartScene;
     #endregion
 
     #region CLASS METHODS
     public void LoadNextScene() => StartCoroutine(LoadScene(NextSceneIndex));
+
+    public void LoadPreviousScene() => StartCoroutine(LoadScene(PreviousSceneIndex));
+
+    public void RestartScene() => StartCoroutine(LoadScene(CurrentSceneIndex));
 
     private IEnumerator LoadScene(int sceneIndexToLoad)
     {

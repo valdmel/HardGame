@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerBody : MonoBehaviour
 {
     #region VARIABLES
-    public static Action OnPlayerDeath;
+    public static Action onPlayerDeath;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -26,8 +26,8 @@ public class PlayerBody : MonoBehaviour
     #region CLASS METHODS
     private void Kill()
     {
-        OnPlayerDeath?.Invoke();
-        Destroy(gameObject.transform.parent.gameObject);
+        onPlayerDeath?.Invoke();
+        transform.parent.gameObject.SetActive(false);
     }
     #endregion
 }

@@ -18,9 +18,9 @@ public class Door : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => PlayerBody.OnPlayerDeath += Close;
+    private void OnEnable() => PlayerBody.onPlayerDeath += Close;
 
-    private void OnDisable() => PlayerBody.OnPlayerDeath -= Close;
+    private void OnDisable() => PlayerBody.onPlayerDeath -= Close;
     #endregion
 
     #region CLASS METHODS

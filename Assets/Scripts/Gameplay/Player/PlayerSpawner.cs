@@ -11,11 +11,7 @@ public class PlayerSpawner : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => PlayerBody.OnPlayerDeath += SpawnPlayer;
-
     private void Start() => SpawnPlayer();
-
-    private void OnDisable() => PlayerBody.OnPlayerDeath -= SpawnPlayer;
     #endregion
 
     #region CLASS METHODS

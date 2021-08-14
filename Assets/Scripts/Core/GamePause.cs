@@ -15,9 +15,9 @@ public class GamePause : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Awake() => audioSource = GetComponent<AudioSource>();
 
-    private void OnEnable() => GameManager.OnGamePause += ActivatePauseMenu;
+    private void OnEnable() => GameManager.onGamePause += ActivatePauseMenu;
 
-    private void OnDisable() => GameManager.OnGamePause -= ActivatePauseMenu;
+    private void OnDisable() => GameManager.onGamePause -= ActivatePauseMenu;
     #endregion
 
     #region CLASS METHODS
