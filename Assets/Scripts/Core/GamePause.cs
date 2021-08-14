@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public sealed class GamePause : MonoBehaviour
+public class GamePause : MonoBehaviour
 {
     #region VARIABLES
     #region SERIALIZABLE

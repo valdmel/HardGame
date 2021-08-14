@@ -57,17 +57,6 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = pauseTimeScale;
     }
 
-    public void LoadNextScene() => StartCoroutine(LoadScene(NextSceneIndex));
-
-    public void LoadPreviousScene() => StartCoroutine(LoadScene(PreviousSceneIndex));
-
-    private IEnumerator LoadScene(int sceneIndexToLoad)
-    {
-        yield return new WaitForSeconds(SCENE_LOADING_TIME);
-
-        SceneManager.LoadScene(sceneIndexToLoad);
-    }
-
     private IEnumerator StartTimer()
     {
         var minutesFromSeconds = TimeSpan.FromSeconds(seconds).Minutes;

@@ -19,7 +19,6 @@ public class PlayerBody : MonoBehaviour
         else if (other.WasWithSuperBomb())
         {
             Kill();
-            GameManager.Instance.LoadPreviousScene();
         }
     }
     #endregion
