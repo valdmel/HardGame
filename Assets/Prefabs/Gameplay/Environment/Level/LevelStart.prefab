@@ -327,3 +327,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObjectToSpawn: {fileID: 7611507161983927420, guid: 47c446de82587eb47830ed95603b1220, type: 3}
+  spawnTimeInSeconds: 1

@@ -1,4 +1,5 @@
 using Cinemachine;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
@@ -7,21 +8,29 @@ public class PlayerSpawner : MonoBehaviour
     #region SERIALIZABLE
     [Header("Spawner Properties")]
     [SerializeField] private GameObject playerObjectToSpawn;
+    [SerializeField, Min(1)] private float spawnTimeInSeconds = 1f;
     #endregion
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => PlayerBody.onPlayerTouchBomb += SpawnPlayer;
+    private void OnEnable() => PlayerBody.onPlayerTouchBomb += InitSpawn;
 
-    private void Start() => SpawnPlayer();
+    private void Start() => InitSpawn();
 
-    private void OnDisable() => PlayerBody.onPlayerTouchBomb -= SpawnPlayer;
+    private void OnDisable() => PlayerBody.onPlayerTouchBomb -= InitSpawn;
     #endregion
 
     #region CLASS METHODS
-    private void SpawnPlayer()
+    public void InitSpawn() => StartCoroutine(SpawnPlayer());
+
+    private IEnumerator SpawnPlayer()
     {
-        DestroyOldPlayerObject();
+        var oldPlayerObject = FindObjectOfType<PlayerBody>()?.transform.parent.gameObject;
+
+        if (oldPlayerObject)
+        {
+            yield return new WaitForSeconds(spawnTimeInSeconds);
+        }
 
         var playerObject = Instantiate(playerObjectToSpawn);
         var playerBodyObject = playerObject.GetComponentInChildren<PlayerBody>();
@@ -29,11 +38,6 @@ public class PlayerSpawner : MonoBehaviour
         var cinemachineCamera = mainCamera.GetComponentInChildren<CinemachineVirtualCamera>();
         cinemachineCamera.Follow = playerBodyObject.transform;
         cinemachineCamera.LookAt = playerBodyObject.transform;
-    }
-
-    private static void DestroyOldPlayerObject()
-    {
-        var oldPlayerObject = FindObjectOfType<PlayerBody>()?.transform.parent.gameObject;
 
         if (oldPlayerObject)
         {
