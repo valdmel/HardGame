@@ -10,10 +10,10 @@ public class GameManager : Singleton<GameManager>
     private const int STARTING_TIME = 0;
     private const float DECREASING_TIME_IN_SECONDS = 1f;
 
-    public static Action onGamePause;
     public static Action<string> onDeathCounterChange;
     public static Action<string> onTimeChange;
-    public static Action OnTimeMax;
+    public static Action onGamePause;
+    public static Action onTimeMax;
 
     private bool isGamePaused = false;
     private int deathCounter = 0;
@@ -59,7 +59,7 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(DECREASING_TIME_IN_SECONDS);
         }
 
-        OnTimeMax?.Invoke();
+        onTimeMax?.Invoke();
     }
 
     private void OnDeath()
