@@ -5,6 +5,12 @@ public class PlayerBody : MonoBehaviour
 {
     #region VARIABLES
     public static Action onPlayerDeath;
+
+    #region SERIALIZABLE
+    [Header("Body Properties")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip deathSFX;
+    #endregion
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
