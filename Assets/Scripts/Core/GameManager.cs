@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -25,9 +26,19 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => PlayerBody.onPlayerDeath += OnDeath;
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoad;
+        PlayerBody.onPlayerDeath += UpdateDeathCounter;
+    }
 
-    private void OnDisable() => PlayerBody.onPlayerDeath -= OnDeath;
+    private void Start() => InitTime();
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoad;
+        PlayerBody.onPlayerDeath -= UpdateDeathCounter;
+    }
     #endregion
 
     #region CLASS METHODS
@@ -62,14 +73,10 @@ public class GameManager : Singleton<GameManager>
         onTimeMax?.Invoke();
     }
 
-    private void OnDeath()
-    {
-        StopTime();
-        UpdateDeathCounter();
-    }
-
     private void UpdateDeathCounter() => onDeathCounterChange?.Invoke((++deathCounter).ToString());
 
     private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TIMESPAN_PATTERN);
+
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => InitTime();
     #endregion
 }

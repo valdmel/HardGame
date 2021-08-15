@@ -18,8 +18,6 @@ public class PlayerBody : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnEnable() => GameManager.onTimeMax += Kill;
 
-    private void Start() => GameManager.Instance.InitTime();
-
     private void OnDisable() => GameManager.onTimeMax -= Kill;
 
     private void OnTriggerEnter(Collider other)

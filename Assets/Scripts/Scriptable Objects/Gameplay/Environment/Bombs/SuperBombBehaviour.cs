@@ -10,6 +10,7 @@ public class SuperBombBehaviour : BombBehaviour
 
         PlayerBody.onPlayerTouchSuperBomb?.Invoke();
         playerBodyObject.Kill();
+        GameManager.Instance.StopTime();
     }
     #endregion
 }
