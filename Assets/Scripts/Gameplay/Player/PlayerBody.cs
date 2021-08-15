@@ -1,3 +1,4 @@
+using OmegaEngine.Core.Commons;
 using System;
 using UnityEngine;
 
@@ -8,8 +9,8 @@ public class PlayerBody : MonoBehaviour
     public static Action onPlayerTouchSuperBomb;
 
     #region SERIALIZABLE
-    [Header("Body Properties")]
-    [SerializeField] private AudioSource audioSource;
+    [Header("Audio Properties")]
+    [SerializeField] private GameObject detacheableAudioSource;
     [SerializeField] private AudioClip deathSFX;
     #endregion
     #endregion
@@ -31,6 +32,12 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    public void Kill() => transform.parent.gameObject.SetActive(false);
+    public void Kill()
+    {
+        var audioSource = Instantiate(detacheableAudioSource);
+
+        audioSource.GetComponent<DetachableAudioSource>().PlayOneShot(deathSFX);
+        transform.parent.gameObject.SetActive(false);
+    }
     #endregion
 }
