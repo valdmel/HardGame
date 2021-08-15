@@ -18,7 +18,7 @@ public class GameManager : Singleton<GameManager>
     private bool isGamePaused = false;
     private int deathCounter = 0;
     private int timeInSeconds;
-    private Coroutine timerCoroutine;
+    private Coroutine timeCoroutine;
 
     public bool IsGamePaused { get => isGamePaused; set => isGamePaused = value; }
     public int DeathCounter { get => deathCounter; private set => deathCounter = value; }
@@ -34,14 +34,14 @@ public class GameManager : Singleton<GameManager>
     public void InitTime()
     {
         timeInSeconds = STARTING_TIME;
-        timerCoroutine = StartCoroutine(StartTime());
+        timeCoroutine = StartCoroutine(StartTime());
     }
 
     public void StopTime()
     {
-        StopCoroutine(timerCoroutine);
+        StopCoroutine(timeCoroutine);
 
-        timerCoroutine = null;
+        timeCoroutine = null;
     }
 
     public void PauseGame() => onGamePause?.Invoke();
@@ -70,6 +70,6 @@ public class GameManager : Singleton<GameManager>
 
     private void UpdateDeathCounter() => onDeathCounterChange?.Invoke((++deathCounter).ToString());
 
-    private string TimeInSecondsToString(int seconds) => TimeSpan.FromSeconds(seconds).ToString(TIMESPAN_PATTERN);
+    private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TIMESPAN_PATTERN);
     #endregion
 }

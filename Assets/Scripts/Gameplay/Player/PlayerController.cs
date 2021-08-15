@@ -36,8 +36,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnPause(InputAction.CallbackContext inputContext)
     {
-        var hasActionPerformed = inputContext.performed;
-        var canPauseGame = hasActionPerformed;
+        var canPauseGame = inputContext.performed;
 
         if (canPauseGame)
         {
