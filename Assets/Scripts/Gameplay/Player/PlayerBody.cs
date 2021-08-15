@@ -6,7 +6,6 @@ public class PlayerBody : MonoBehaviour
     #region VARIABLES
     public static Action onPlayerTouchBomb;
     public static Action onPlayerTouchSuperBomb;
-    public static Action onPlayerDeath;
 
     #region SERIALIZABLE
     [Header("Body Properties")]
@@ -32,10 +31,6 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    public void Kill()
-    {
-        onPlayerDeath?.Invoke();
-        transform.parent.gameObject.SetActive(false);
-    }
+    public void Kill() => transform.parent.gameObject.SetActive(false);
     #endregion
 }

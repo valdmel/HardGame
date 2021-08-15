@@ -29,7 +29,8 @@ public class GameManager : Singleton<GameManager>
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoad;
-        PlayerBody.onPlayerDeath += UpdateDeathCounter;
+        PlayerBody.onPlayerTouchBomb += UpdateDeathCounter;
+        PlayerBody.onPlayerTouchSuperBomb += UpdateDeathCounter;
     }
 
     private void Start() => InitTime();
@@ -37,7 +38,8 @@ public class GameManager : Singleton<GameManager>
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoad;
-        PlayerBody.onPlayerDeath -= UpdateDeathCounter;
+        PlayerBody.onPlayerTouchBomb -= UpdateDeathCounter;
+        PlayerBody.onPlayerTouchSuperBomb -= UpdateDeathCounter;
     }
     #endregion
 
