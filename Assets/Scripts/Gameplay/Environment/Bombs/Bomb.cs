@@ -9,11 +9,14 @@ public class Bomb : MonoBehaviour
     [Header("Bomb Properties")]
     [SerializeField] private BombDirection bombDirection;
     [SerializeField] private BombSpeed bombSpeed;
+    [SerializeField] private BombBehaviour bombBehaviour;
     [SerializeField] private bool invertSpeed;
     #endregion
 
     private float moveSpeed;
     private Vector3 moveDirection;
+
+    public BombBehaviour BombBehaviour { get => bombBehaviour; private set => bombBehaviour = value; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS

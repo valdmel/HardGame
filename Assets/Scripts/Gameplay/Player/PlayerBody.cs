@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerBody : MonoBehaviour
 {
     #region VARIABLES
+    public static Action onPlayerTouchBomb;
+    public static Action onPlayerTouchSuperBomb;
     public static Action onPlayerDeath;
 
     #region SERIALIZABLE
@@ -22,13 +24,11 @@ public class PlayerBody : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.WasWithBomb())
+        var bomb = other.GetComponent<Bomb>();
+
+        if (bomb)
         {
-            Kill();
-        }
-        else if (other.WasWithSuperBomb())
-        {
-            Kill();
+            bomb.BombBehaviour.Execute(gameObject);
         }
     }
     #endregion
