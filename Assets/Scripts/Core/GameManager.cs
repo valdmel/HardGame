@@ -8,7 +8,6 @@ public class GameManager : Singleton<GameManager>
     private const string TIMESPAN_PATTERN = @"mm\:ss";
     private const int MAX_MINUTES = 60;
     private const int STARTING_TIME = 0;
-    private const float GAME_DEFAULT_TIMESCALE = 1f;
     private const float DECREASING_TIME_IN_SECONDS = 1f;
 
     public static Action onGamePause;
@@ -21,7 +20,7 @@ public class GameManager : Singleton<GameManager>
     private int timeInSeconds;
     private Coroutine timerCoroutine;
 
-    public bool IsGamePaused { get => isGamePaused; private set => isGamePaused = value; }
+    public bool IsGamePaused { get => isGamePaused; set => isGamePaused = value; }
     public int DeathCounter { get => deathCounter; private set => deathCounter = value; }
     #endregion
 
@@ -45,14 +44,7 @@ public class GameManager : Singleton<GameManager>
         timerCoroutine = null;
     }
 
-    public void PauseGame()
-    {
-        var pauseTimeScale = GAME_DEFAULT_TIMESCALE - Time.timeScale;
-        isGamePaused = !isGamePaused;
-
-        onGamePause?.Invoke();
-        Time.timeScale = pauseTimeScale;
-    }
+    public void PauseGame() => onGamePause?.Invoke();
 
     private IEnumerator StartTime()
     {
