@@ -28,22 +28,25 @@ public class GameManager : Singleton<GameManager>
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += OnSceneLoad;
+        //SceneManager.sceneLoaded += OnSceneLoad;
         PlayerBody.onPlayerTouchBomb += UpdateDeathCounter;
         PlayerBody.onPlayerTouchSuperBomb += UpdateDeathCounter;
     }
 
-    private void Start() => InitTime();
-
     private void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnSceneLoad;
+        //SceneManager.sceneLoaded -= OnSceneLoad;
         PlayerBody.onPlayerTouchBomb -= UpdateDeathCounter;
         PlayerBody.onPlayerTouchSuperBomb -= UpdateDeathCounter;
     }
     #endregion
 
     #region CLASS METHODS
+    public void StartNewGame()
+    {
+        InitTime();
+    }
+
     public void InitTime()
     {
         timeInSeconds = STARTING_TIME;
@@ -79,6 +82,6 @@ public class GameManager : Singleton<GameManager>
 
     private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TIMESPAN_PATTERN);
 
-    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => InitTime();
+/*    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => InitTime();*/
     #endregion
 }

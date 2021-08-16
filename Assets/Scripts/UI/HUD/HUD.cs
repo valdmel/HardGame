@@ -18,7 +18,7 @@ public class HUD : MonoBehaviour
         GameManager.onTimeChange += DisplayTime;
     }
 
-    private void Start() => DisplayDeathCounter(GameManager.Instance.DeathCounter.ToString());
+/*    private void Start() => DisplayDeathCounter(GameManager.Instance.DeathCounter.ToString());*/
 
     private void OnDisable()
     {
