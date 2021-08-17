@@ -11,16 +11,24 @@ public class GameManager : Singleton<GameManager>
     private const int STARTING_TIME = 0;
     private const float DECREASING_TIME_IN_SECONDS = 1f;
 
+    public enum GameMode
+    {
+        NORMAL = 0,
+        SPEEDRUN = 1
+    }
+
     public static Action<string> onDeathCounterChange;
     public static Action<string> onTimeChange;
     public static Action onGamePause;
     public static Action onTimeMax;
 
+    private int activeGameMode;
     private bool isGamePaused = false;
     private int deathCounter = 0;
     private int timeInSeconds;
     private Coroutine timeCoroutine;
 
+    public int ActiveGameMode { get => activeGameMode; set => activeGameMode = value; }
     public bool IsGamePaused { get => isGamePaused; set => isGamePaused = value; }
     public int DeathCounter { get => deathCounter; private set => deathCounter = value; }
     #endregion
@@ -28,25 +36,20 @@ public class GameManager : Singleton<GameManager>
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnEnable()
     {
-        //SceneManager.sceneLoaded += OnSceneLoad;
+        SceneManager.sceneLoaded += OnSceneLoad;
         PlayerBody.onPlayerTouchBomb += UpdateDeathCounter;
         PlayerBody.onPlayerTouchSuperBomb += UpdateDeathCounter;
     }
 
     private void OnDisable()
     {
-        //SceneManager.sceneLoaded -= OnSceneLoad;
+        SceneManager.sceneLoaded -= OnSceneLoad;
         PlayerBody.onPlayerTouchBomb -= UpdateDeathCounter;
         PlayerBody.onPlayerTouchSuperBomb -= UpdateDeathCounter;
     }
     #endregion
 
     #region CLASS METHODS
-    public void StartNewGame()
-    {
-        InitTime();
-    }
-
     public void InitTime()
     {
         timeInSeconds = STARTING_TIME;
@@ -55,10 +58,17 @@ public class GameManager : Singleton<GameManager>
 
     public void StopTime()
     {
-        StopCoroutine(timeCoroutine);
+        if (IsNormalGameModeActive())
+        {
+            StopCoroutine(timeCoroutine);
 
-        timeCoroutine = null;
+            timeCoroutine = null;
+        }
     }
+
+    public void ActivateNormalGameMode() => activeGameMode = (int)GameMode.NORMAL;
+
+    public void ActivateSpeedrunGameMode() => activeGameMode = (int)GameMode.SPEEDRUN;
 
     public void PauseGame() => onGamePause?.Invoke();
 
@@ -82,6 +92,16 @@ public class GameManager : Singleton<GameManager>
 
     private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TIMESPAN_PATTERN);
 
-/*    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => InitTime();*/
+    private bool IsNormalGameModeActive() => activeGameMode.Equals((int)GameMode.NORMAL);
+
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode)
+    {
+        if (timeCoroutine == null)
+        {
+            InitTime();
+        }
+
+        onDeathCounterChange?.Invoke(deathCounter.ToString());
+    }
     #endregion
 }

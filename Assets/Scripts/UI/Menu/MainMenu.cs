@@ -9,6 +9,8 @@ public sealed class MainMenu : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    public void StartNewGame() => GameManager.Instance.StartNewGame();
+    public void StartNormalGame() => GameManager.Instance.ActivateNormalGameMode();
+
+    public void StartSpeedrunGame() => GameManager.Instance.ActivateSpeedrunGameMode();
     #endregion
 }
