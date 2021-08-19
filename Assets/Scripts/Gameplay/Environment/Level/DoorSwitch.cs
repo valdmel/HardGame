@@ -21,7 +21,7 @@ public class DoorSwitch : MonoBehaviour
         if (other.WasWithPlayerBody() && !isSwitchPressed)
         {
             ActivateSwitch();
-            doorBodyObjectToOpen.GetComponent<Door>().Open();
+            doorBodyObjectToOpen.GetComponentInChildren<Door>().Open();
         }
     }
     #endregion
