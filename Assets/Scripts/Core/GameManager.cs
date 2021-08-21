@@ -11,7 +11,7 @@ public class GameManager : Singleton<GameManager>
     private const int STARTING_TIME = 0;
     private const float DECREASING_TIME_IN_SECONDS = 1f;
 
-    public enum GameMode
+    private enum GameMode
     {
         NORMAL = 0,
         SPEEDRUN = 1
@@ -23,14 +23,12 @@ public class GameManager : Singleton<GameManager>
     public static Action onTimeMax;
 
     private int activeGameMode;
-    private bool isGamePaused = false;
     private int deathCounter = 0;
     private int timeInSeconds;
+    private bool isGamePaused = false;
     private Coroutine timeCoroutine;
 
-    public int ActiveGameMode { get => activeGameMode; set => activeGameMode = value; }
     public bool IsGamePaused { get => isGamePaused; set => isGamePaused = value; }
-    public int DeathCounter { get => deathCounter; private set => deathCounter = value; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
