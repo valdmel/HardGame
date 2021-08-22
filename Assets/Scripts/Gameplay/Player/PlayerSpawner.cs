@@ -10,9 +10,17 @@ public class PlayerSpawner : MonoBehaviour
     [SerializeField] private GameObject playerObjectToSpawn;
     [SerializeField, Min(1)] private float spawnTimeInSeconds = 1f;
     #endregion
+
+    private CinemachineVirtualCamera cinemachineCamera;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
+    private void Awake()
+    {
+        var mainCamera = Camera.main.gameObject;
+        cinemachineCamera = mainCamera.GetComponentInChildren<CinemachineVirtualCamera>();
+    }
+
     private void OnEnable() => PlayerBody.onPlayerTouchBomb += InitSpawn;
 
     private void Start() => InitSpawn();
@@ -36,8 +44,6 @@ public class PlayerSpawner : MonoBehaviour
 
         var playerObject = Instantiate(playerObjectToSpawn);
         var playerBodyObject = playerObject.GetComponentInChildren<PlayerBody>();
-        var mainCamera = Camera.main.gameObject;
-        var cinemachineCamera = mainCamera.GetComponentInChildren<CinemachineVirtualCamera>();
         cinemachineCamera.Follow = playerBodyObject.transform;
         cinemachineCamera.LookAt = playerBodyObject.transform;
 
