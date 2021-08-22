@@ -23,6 +23,8 @@ public class PlayerSpawner : MonoBehaviour
     #region CLASS METHODS
     public void InitSpawn() => StartCoroutine(SpawnPlayer());
 
+    public void StartGame() => GameManager.Instance.StartLevel();
+
     private IEnumerator SpawnPlayer()
     {
         var oldPlayerObject = FindObjectOfType<PlayerBody>()?.transform.parent.gameObject;

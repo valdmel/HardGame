@@ -54,6 +54,16 @@ public class GameManager : Singleton<GameManager>
         timeCoroutine = StartCoroutine(StartTime());
     }
 
+    public void StartLevel()
+    {
+        if (timeCoroutine == null)
+        {
+            InitTime();
+        }
+
+        onDeathCounterChange?.Invoke(deathCounter.ToString());
+    }
+
     public void StopTime()
     {
         if (IsNormalGameModeActive())
@@ -92,14 +102,6 @@ public class GameManager : Singleton<GameManager>
 
     private bool IsNormalGameModeActive() => activeGameMode.Equals((int)GameMode.NORMAL);
 
-    private void OnSceneLoad(Scene scene, LoadSceneMode mode)
-    {
-        if (timeCoroutine == null)
-        {
-            InitTime();
-        }
-
-        onDeathCounterChange?.Invoke(deathCounter.ToString());
-    }
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => onDeathCounterChange?.Invoke(deathCounter.ToString());
     #endregion
 }
