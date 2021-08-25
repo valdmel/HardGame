@@ -1,10 +1,13 @@
 using Cinemachine;
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
     #region VARIABLES
+    public static Action<GameObject> onPlayerSpawn;
+
     #region SERIALIZABLE
     [Header("Spawner Properties")]
     [SerializeField] private GameObject playerObjectToSpawn;
@@ -15,12 +18,6 @@ public class PlayerSpawner : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Awake()
-    {
-        var mainCamera = Camera.main.gameObject;
-        cinemachineCamera = mainCamera.GetComponentInChildren<CinemachineVirtualCamera>();
-    }
-
     private void OnEnable() => PlayerBody.onPlayerTouchBomb += InitSpawn;
 
     private void Start() => InitSpawn();
@@ -43,9 +40,8 @@ public class PlayerSpawner : MonoBehaviour
         }
 
         var playerObject = Instantiate(playerObjectToSpawn);
-        var playerBodyObject = playerObject.GetComponentInChildren<PlayerBody>();
-        cinemachineCamera.Follow = playerBodyObject.transform;
-        cinemachineCamera.LookAt = playerBodyObject.transform;
+
+        onPlayerSpawn?.Invoke(playerObject);
 
         if (oldPlayerObject)
         {
