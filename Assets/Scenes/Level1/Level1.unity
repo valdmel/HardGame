@@ -8381,7 +8381,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 5f169290291cf63439114987b1a0aae8, type: 3}
 --- !u!114 &406080897338269155 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2089030792, guid: 5f169290291cf63439114987b1a0aae8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1948039529, guid: 5f169290291cf63439114987b1a0aae8, type: 3}
   m_PrefabInstance: {fileID: 406080897338269154}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -8427,11 +8427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00047160772
+      value: 0.000471798
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0003340111
+      value: -0.00033414576
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

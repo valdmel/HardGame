@@ -39,7 +39,7 @@ public class PlayerSpawner : MonoBehaviour
             yield return new WaitForSeconds(spawnTimeInSeconds);
         }
 
-        var playerObject = Instantiate(playerObjectToSpawn);
+        var playerObject = Instantiate(playerObjectToSpawn, transform.position, Quaternion.identity);
 
         onPlayerSpawn?.Invoke(playerObject);
 
