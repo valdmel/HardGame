@@ -851,6 +851,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529602989}
     m_Modifications:
+    - target: {fileID: 119978729, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
+      propertyPath: bombSpeed
+      value: 
+      objectReference: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
     - target: {fileID: 7105203581781684467, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
       propertyPath: m_Name
       value: BlueBomb
@@ -913,6 +917,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529602989}
     m_Modifications:
+    - target: {fileID: 119978729, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
+      propertyPath: bombSpeed
+      value: 
+      objectReference: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
+    - target: {fileID: 119978729, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
+      propertyPath: invertSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7105203581781684467, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
       propertyPath: m_Name
       value: BlueBomb (1)
@@ -1075,6 +1087,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529602989}
     m_Modifications:
+    - target: {fileID: 119978729, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
+      propertyPath: bombSpeed
+      value: 
+      objectReference: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
+    - target: {fileID: 119978729, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
+      propertyPath: invertSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7105203581781684467, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
       propertyPath: m_Name
       value: BlueBomb (3)
@@ -10806,6 +10826,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1529602989}
     m_Modifications:
+    - target: {fileID: 119978729, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
+      propertyPath: bombSpeed
+      value: 
+      objectReference: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
     - target: {fileID: 7105203581781684467, guid: ff6ad79de5c0f664980f6912d7bcf3a1, type: 3}
       propertyPath: m_Name
       value: BlueBomb (2)
@@ -11264,11 +11288,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0005458444
+      value: 0.00054665987
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00038654907
+      value: -0.0003871262
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
