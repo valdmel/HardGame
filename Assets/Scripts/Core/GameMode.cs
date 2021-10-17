@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour
+public class GameMode : MonoBehaviour
 {
     #region CLASS METHODS
     public void StartNormalGame() => GameManager.Instance.ActivateNormalGameMode();
