@@ -31,7 +31,7 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.WasWithLevelWalls())
+        if (other.WasWithWall())
         {
             InvertMoveSpeed();
         }

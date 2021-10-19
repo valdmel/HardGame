@@ -126,6 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombDirection: {fileID: 11400000, guid: 1a0b44c55a5a7ee4689451da728124a2, type: 2}
-  bombSpeed: {fileID: 11400000, guid: c780e902fdcfaf3499102db8be1ed41d, type: 2}
+  bombSpeed: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
   bombBehaviour: {fileID: 11400000, guid: 6177267059b593040bd0ba6ac239f0ec, type: 2}
-  invertSpeed: 0
+  invertSpeed: 1

@@ -6,7 +6,7 @@ public static class CollisionExtensions
     private const string PLAYER_BODY_TAG = "PlayerBody";
     private const string BOMB_TAG = "Bomb";
     private const string SUPER_BOMB_TAG = "SuperBomb";
-    private const string LEVEL_WALLS_TAG = "Level";
+    private const string WALL_TAG = "Wall";
     #endregion
 
     #region CLASS METHODS
@@ -16,6 +16,6 @@ public static class CollisionExtensions
 
     public static bool WasWithSuperBomb(this Collider other) => other.CompareTag(SUPER_BOMB_TAG);
 
-    public static bool WasWithLevelWalls(this Collider other) => other.CompareTag(LEVEL_WALLS_TAG);
+    public static bool WasWithWall(this Collider other) => other.CompareTag(WALL_TAG);
     #endregion
 }
