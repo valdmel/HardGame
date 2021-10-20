@@ -832,6 +832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreditsUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7245391496070346670, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7668981136225268440, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_RootOrder
       value: 2
