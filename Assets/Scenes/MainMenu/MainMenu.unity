@@ -751,6 +751,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameInstructionsUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3814042225956238580, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
+      propertyPath: m_text
+      value: 'You are the <color=#EC346A>magenta</color> cube. Your goal is to reach
+        the <color=#FDA700>level exit</color> dying as less as possible.
+
+        Avoid
+        touching <color=#00ADFF>blue</color> and <color=#B10020>red</color> bombs,
+        unless you want to restart the level or go back to the previous level, respectively.
+
+        Some
+        <color=#FDA700>level exits</color> are blocked by doors. Look for the switches
+        matching the door''s colour.
+
+
+        <align="center">Good luck!</align="center">'
+      objectReference: {fileID: 0}
     - target: {fileID: 4183650169199422260, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
       propertyPath: m_RootOrder
       value: 0
