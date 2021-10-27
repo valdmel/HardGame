@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ee41cf547cbf34186ff8b8fe27b4ec, type: 3}
   m_Name: VerticalDirection
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0, z: 0}
+  moveDirection: {x: 0, y: 0, z: 1}
