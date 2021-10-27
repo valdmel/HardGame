@@ -307,6 +307,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6818310ed99bb45bd6f6c020b63858, type: 3}
+--- !u!114 &316890944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 316890946, guid: 7a6818310ed99bb45bd6f6c020b63858, type: 3}
+  m_PrefabInstance: {fileID: 316890943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c500c0f288ce145bae81201a570c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &326739992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6231,7 +6242,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-120018
+  m_Name: pb_Mesh-134588
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6924,11 +6935,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0008550234
+      value: 0.0008553224
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000605535
+      value: -0.0006057469
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6951,6 +6962,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 505175897}
     m_Modifications:
+    - target: {fileID: 372511961, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
+      propertyPath: onLevelFinish.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 316890944}
+    - target: {fileID: 372511961, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
+      propertyPath: onLevelFinish.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextScene
+      objectReference: {fileID: 0}
     - target: {fileID: 8228566630657560112, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
       propertyPath: m_Mesh
       value: 
