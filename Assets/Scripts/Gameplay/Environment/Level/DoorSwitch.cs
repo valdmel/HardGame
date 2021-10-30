@@ -12,9 +12,9 @@ public class DoorSwitch : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => PlayerBody.onPlayerTouchBomb += ResetSwitch;
+    private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += ResetSwitch;
 
-    private void OnDisable() => PlayerBody.onPlayerTouchBomb -= ResetSwitch;
+    private void OnDisable() => PlayerBody.onPlayerTouchSuperBomb -= ResetSwitch;
 
     private void OnTriggerEnter(Collider other)
     {

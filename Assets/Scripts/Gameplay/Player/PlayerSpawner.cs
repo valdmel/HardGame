@@ -18,11 +18,19 @@ public class PlayerSpawner : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => PlayerBody.onPlayerTouchBomb += InitSpawn;
+    private void OnEnable()
+    {
+        PlayerBody.onPlayerTouchBomb += InitSpawn;
+        PlayerBody.onPlayerTouchSuperBomb += InitSpawn;
+    }
 
     private void Start() => InitSpawn();
 
-    private void OnDisable() => PlayerBody.onPlayerTouchBomb -= InitSpawn;
+    private void OnDisable()
+    {
+        PlayerBody.onPlayerTouchBomb -= InitSpawn;
+        PlayerBody.onPlayerTouchSuperBomb -= InitSpawn;
+    }
     #endregion
 
     #region CLASS METHODS

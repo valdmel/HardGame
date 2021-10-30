@@ -6,11 +6,8 @@ public class SuperBombBehaviour : BombBehaviour
     #region CLASS METHODS
     public override void Execute(GameObject objectToBeAffected)
     {
-        var playerBodyObject = objectToBeAffected.GetComponent<PlayerBody>();
-
         PlayerBody.onPlayerTouchSuperBomb?.Invoke();
-        playerBodyObject.Kill();
-        GameManager.Instance.StopTime();
+        base.Execute(objectToBeAffected);
     }
     #endregion
 }

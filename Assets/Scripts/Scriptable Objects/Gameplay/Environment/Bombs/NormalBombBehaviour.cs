@@ -6,10 +6,8 @@ public class NormalBombBehaviour : BombBehaviour
     #region CLASS METHODS
     public override void Execute(GameObject objectToBeAffected)
     {
-        var playerBodyObject = objectToBeAffected.GetComponent<PlayerBody>();
-
         PlayerBody.onPlayerTouchBomb?.Invoke();
-        playerBodyObject.Kill();
+        base.Execute(objectToBeAffected);
     }
     #endregion
 }

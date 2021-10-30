@@ -17,6 +17,12 @@ public class Door : MonoBehaviour
     private Coroutine doorOpenCoroutine;
     #endregion
 
+    #region MONOBEHAVIOUR CALLBACK METHODS
+    private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += Close;
+
+    private void OnDisable() => PlayerBody.onPlayerTouchSuperBomb -= Close;
+    #endregion
+
     #region CLASS METHODS
     public void Open()
     {

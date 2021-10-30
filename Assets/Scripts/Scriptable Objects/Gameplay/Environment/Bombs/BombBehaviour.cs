@@ -3,6 +3,11 @@ using UnityEngine;
 public abstract class BombBehaviour : ScriptableObject
 {
     #region CLASS METHODS
-    public abstract void Execute(GameObject objectToBeAffected);
+    public virtual void Execute(GameObject objectToBeAffected)
+    {
+        var playerBodyObject = objectToBeAffected.GetComponent<PlayerBody>();
+
+        playerBodyObject.Kill();
+    }
     #endregion
 }

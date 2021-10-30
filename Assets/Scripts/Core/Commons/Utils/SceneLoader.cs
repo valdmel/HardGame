@@ -15,12 +15,6 @@ public class SceneLoader : MonoBehaviour
     #endregion
     #endregion
 
-    #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += LoadPreviousScene;
-
-    private void OnDisable() => PlayerBody.onPlayerTouchSuperBomb -= LoadPreviousScene;
-    #endregion
-
     #region CLASS METHODS
     public void LoadNextScene() => StartCoroutine(LoadScene(NextSceneIndex));
 
