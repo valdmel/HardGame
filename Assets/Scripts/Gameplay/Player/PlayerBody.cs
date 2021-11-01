@@ -26,7 +26,7 @@ public class PlayerBody : MonoBehaviour
 
         if (bomb)
         {
-            bomb.BombBehaviour.Execute(gameObject);
+            bomb.BombBehaviour.ApplyTo(gameObject);
         }
     }
     #endregion

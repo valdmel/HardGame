@@ -4,10 +4,10 @@ using UnityEngine;
 public class SuperBombBehaviour : BombBehaviour
 {
     #region CLASS METHODS
-    public override void Execute(GameObject objectToBeAffected)
+    public override void ApplyTo(GameObject objectToBeAffected)
     {
         PlayerBody.onPlayerTouchSuperBomb?.Invoke();
-        base.Execute(objectToBeAffected);
+        base.ApplyTo(objectToBeAffected);
     }
     #endregion
 }
