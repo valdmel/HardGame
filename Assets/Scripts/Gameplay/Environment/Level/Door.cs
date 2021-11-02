@@ -46,7 +46,6 @@ public class Door : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, toPosition, doorOpeningSpeed);
 
             yield return null;
-
         } while (Vector3.Distance(transform.position, toPosition) > MIN_DISTANCE);
 
         StopCoroutine(doorOpenCoroutine);
