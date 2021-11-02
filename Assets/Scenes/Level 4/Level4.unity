@@ -2453,9 +2453,17 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 851777427}
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 19000000
+  m_SelectedEdges:
+  - a: 160
+    b: 161
+  - a: 162
+    b: 160
+  - a: 161
+    b: 163
+  - a: 163
+    b: 162
+  m_SelectedVertices: a0000000a1000000a2000000a3000000
 --- !u!4 &494571186
 Transform:
   m_ObjectHideFlags: 0
@@ -3560,7 +3568,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53942
+  m_Name: pb_Mesh27574
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4880,11 +4888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0037234353
+      value: 0.0037238167
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0026335206
+      value: -0.0026337912
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
