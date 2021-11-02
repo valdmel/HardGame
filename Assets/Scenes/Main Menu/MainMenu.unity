@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &94799879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1529324413, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
+  m_PrefabInstance: {fileID: 297741848969838997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &481672233 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 802888157466419389, guid: 17906b730468a444e891ff4dde578080, type: 3}
@@ -303,6 +308,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c500c0f288ce145bae81201a570c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1293272652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5792471483899263633, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
+  m_PrefabInstance: {fileID: 5792471483114430239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1462923094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1450309377, guid: 17906b730468a444e891ff4dde578080, type: 3}
+  m_PrefabInstance: {fileID: 1763817666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1763817666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,10 +329,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3814042225603848369}
+    - target: {fileID: 1450309380, guid: 17906b730468a444e891ff4dde578080, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1969646762}
+    - target: {fileID: 1450309380, guid: 17906b730468a444e891ff4dde578080, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1293272652}
     - target: {fileID: 555747069282219898, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 297741848969838999}
+    - target: {fileID: 555747069282219898, guid: 17906b730468a444e891ff4dde578080, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1969646762}
+    - target: {fileID: 555747069282219898, guid: 17906b730468a444e891ff4dde578080, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 94799879}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -374,6 +405,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 297741848969838999}
+    - target: {fileID: 7054681343314739669, guid: 17906b730468a444e891ff4dde578080, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1969646762}
+    - target: {fileID: 7054681343314739669, guid: 17906b730468a444e891ff4dde578080, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 94799879}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17906b730468a444e891ff4dde578080, type: 3}
 --- !u!4 &1763817667 stripped
@@ -784,22 +823,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameInstructionsUI
       objectReference: {fileID: 0}
-    - target: {fileID: 3814042225956238580, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
-      propertyPath: m_text
-      value: 'You are the <color=#EC346A>magenta</color> cube. Your goal is to reach
-        the <color=#FDA700>level exit</color> dying as less as possible.
-
-        Avoid
-        touching <color=#00ADFF>blue</color> and <color=#B10020>red</color> bombs,
-        unless you want to restart the level or go back to the previous level, respectively.
-
-        Some
-        <color=#FDA700>level exits</color> are blocked by doors. Look for the switches
-        matching the door''s colour.
-
-
-        <align="center">Good luck!</align="center">'
-      objectReference: {fileID: 0}
     - target: {fileID: 4183650169199422260, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -877,13 +900,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 481672233}
+    - target: {fileID: 5792471483899263596, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1969646762}
+    - target: {fileID: 5792471483899263596, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1462923094}
     - target: {fileID: 7245391496070346670, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_Name
       value: CreditsUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7245391496070346670, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7668981136225268440, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_RootOrder
