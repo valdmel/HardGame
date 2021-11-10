@@ -10,7 +10,15 @@ PrefabInstance:
     - target: {fileID: 1271477275947076701, guid: 94c718272879424438f975b082006c36, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a453bae213a8b04b9e9f8adb81cc8be, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e8a5e24d19a26a45bf60dddd9549d66, type: 2}
+    - target: {fileID: 1271477275947076702, guid: 94c718272879424438f975b082006c36, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271477275947076703, guid: 94c718272879424438f975b082006c36, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1271477276952088332, guid: 94c718272879424438f975b082006c36, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -57,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271477276952088333, guid: 94c718272879424438f975b082006c36, type: 3}
       propertyPath: m_Name
-      value: RedDoor
+      value: BlueDoor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c718272879424438f975b082006c36, type: 3}
