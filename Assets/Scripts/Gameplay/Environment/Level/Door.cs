@@ -1,54 +1,25 @@
-using System.Collections;
 using UnityEngine;
 
 public class Door : MonoBehaviour
 {
     #region VARIABLES
-    private const float MIN_DISTANCE = 0.1f;
+    private const string OPEN_TRIGGER = "Open";
+    private const string CLOSE_TRIGGER = "Close";
 
-    #region SERIALIZABLE
-    [Header("Door Properties")]
-    [SerializeField] private Transform startPosition;
-    [SerializeField] private Transform endPosition;
-    [SerializeField, Min(0)] private float doorOpeningSpeed = 0.1f;
-    #endregion
-
-    private bool isOpened = false;
-    private Coroutine doorOpenCoroutine;
+    private Animator animator;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
+    private void Awake() => animator = GetComponent<Animator>();
+
     private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += Close;
 
     private void OnDisable() => PlayerBody.onPlayerTouchSuperBomb -= Close;
     #endregion
 
     #region CLASS METHODS
-    public void Open()
-    {
-        isOpened = true;
-        doorOpenCoroutine = StartCoroutine(SlideEffect(endPosition.position));
-    }
+    public void Open() => animator.SetTrigger(OPEN_TRIGGER);
 
-    public void Close()
-    {
-        if (isOpened)
-        {
-            isOpened = false;
-            doorOpenCoroutine = StartCoroutine(SlideEffect(startPosition.position));
-        }
-    }
-
-    private IEnumerator SlideEffect(Vector3 toPosition)
-    {
-        do
-        {
-            transform.position = Vector3.Lerp(transform.position, toPosition, doorOpeningSpeed);
-
-            yield return null;
-        } while (Vector3.Distance(transform.position, toPosition) > MIN_DISTANCE);
-
-        StopCoroutine(doorOpenCoroutine);
-    }
+    public void Close() => animator.SetTrigger(CLOSE_TRIGGER);
     #endregion
 }
