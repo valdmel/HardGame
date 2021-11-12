@@ -7,9 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2749822313007970656, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2749822313007970661, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
       propertyPath: m_Name
-      value: DoorButton
+      value: YellowDoorButton
       objectReference: {fileID: 0}
     - target: {fileID: 2749822313007970662, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
       propertyPath: m_RootOrder
@@ -54,6 +58,22 @@ PrefabInstance:
     - target: {fileID: 2749822313007970662, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2749822313007970663, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893795635949424410, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893795635949424412, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 296209c80355efe4dad4101c0d7beb8b, type: 2}
+    - target: {fileID: 2893795635949424413, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
