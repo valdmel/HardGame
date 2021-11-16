@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu/MainMenu.unity
     guid: 111e36a19a0d1534ca09c9b87547bd26
   - enabled: 1
-    path: Assets/Scenes/Level 1/Level 1 - The Crooked Centipede.unity
+    path: Assets/Scenes/Level 1/Level1-TheCrookedCentipede.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Level 2/Level2.unity
+    path: Assets/Scenes/Level 2/Level2-TheRattlesnake.unity
     guid: 6419de986eb0b3346adfaf072201d2ae
   - enabled: 1
     path: Assets/Scenes/Level 3/Level3.unity
