@@ -10,6 +10,6 @@ public class Bomb : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    public void ExecuteBehaviour(GameObject gameObject) => bombBehaviour.ApplyTo(gameObject);
+    public void ApplyBehaviourTo(GameObject gameObject) => bombBehaviour.ApplyTo(gameObject);
     #endregion
 }
