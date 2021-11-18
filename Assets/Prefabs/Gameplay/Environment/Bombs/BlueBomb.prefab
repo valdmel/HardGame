@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 560e4ff6da64818408e6c935e3bc4d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombDirection: {fileID: 11400000, guid: 35ca0566a9815a544b6183c3605351db, type: 2}
   bombSpeed: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
-  invertSpeed: 0
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}

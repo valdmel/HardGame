@@ -3,56 +3,42 @@ using UnityEngine;
 public class BombMovement : MonoBehaviour
 {
     #region VARIABLES
-    private const int INVERTED_SPEED_MULTIPLIER = -1;
+    private const float MIN_DISTANCE = 0.1f;
 
     #region SERIALIZABLE
-    [Header("Speed Properties")]
-    [SerializeField] private BombDirection bombDirection;
-    [SerializeField] private BombSpeed bombSpeed;
-    [SerializeField] private bool invertSpeed;
-    #endregion
+     [Header("Movement Properties")]
+     [SerializeField] private BombSpeed bombSpeed;
+     [SerializeField] private Transform[] waypoints;
+     #endregion
 
-    private float moveSpeed;
-    private Vector3 moveDirection;
+     private int currentWaypointIndex = 0;
+     private float moveSpeed;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Start()
     {
-        moveSpeed = invertSpeed ? bombSpeed.MoveSpeed : bombSpeed.MoveSpeed * INVERTED_SPEED_MULTIPLIER;
-        moveDirection = bombDirection.MoveDirection;
+        transform.position = waypoints[0].transform.position;
+        moveSpeed = bombSpeed.MoveSpeed;
     }
 
     private void FixedUpdate() => AddVelocity();
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.WasWithWall())
-        {
-            InvertMoveSpeed();
-        }
-    }
     #endregion
 
     #region CLASS METHODS
-    private void AddVelocity() => transform.Translate(new Vector3(moveDirection.x * moveSpeed, Vector3.zero.y, moveDirection.z * moveSpeed));
+    private void AddVelocity()
+    {
+        var distanceFromWaypointToCurrentPosition = Vector3.Distance(waypoints[currentWaypointIndex].transform.position, transform.position);
 
-    private void InvertMoveSpeed() => moveSpeed = -moveSpeed;
+        if (distanceFromWaypointToCurrentPosition < 0.1)
+        {
+            if (++currentWaypointIndex >= waypoints.Length)
+            {
+                currentWaypointIndex = 0;
+            }
+        }
+
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, Time.deltaTime * moveSpeed);
+    }
     #endregion
 }
-
-/*
- * using UnityEngine;
-
-public class RotatingBomb : MonoBehaviour
-{
-    #region VARIABLES
-    #region SERIALIZABLE
-    [Header("Audio Properties")]
-    [SerializeField] private GameObject target;
-    #endregion
-    #endregion
-
-    private void Update() => transform.RotateAround(target.transform.position, Vector3.up, 100 * Time.deltaTime);
-}
- */

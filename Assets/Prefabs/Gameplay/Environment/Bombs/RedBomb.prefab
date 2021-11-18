@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3169948057451804633}
   - component: {fileID: 5983520035886869646}
   - component: {fileID: 9082958340067188936}
+  - component: {fileID: 2838794148555073571}
   m_Layer: 0
   m_Name: RedBomb
   m_TagString: SuperBomb
@@ -125,7 +126,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d44e4bdb475b32409ed3e05f9e894ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombDirection: {fileID: 11400000, guid: 35ca0566a9815a544b6183c3605351db, type: 2}
-  bombSpeed: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
   bombBehaviour: {fileID: 11400000, guid: f11c66d3ba7f8a04caa4f57186d64ff2, type: 2}
-  invertSpeed: 0
+--- !u!114 &2838794148555073571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169948057451804634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560e4ff6da64818408e6c935e3bc4d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombSpeed: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
+  waypoints: []
