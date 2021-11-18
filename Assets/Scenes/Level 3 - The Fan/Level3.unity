@@ -677,7 +677,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3584
+  m_Name: pb_Mesh-66076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3060,7 +3060,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3598
+  m_Name: pb_Mesh-66090
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6815,11 +6815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000021842006
+      value: 0.0000072717617
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000016414643
+      value: -0.0000054648754
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6906,10 +6906,6 @@ PrefabInstance:
       propertyPath: doorBodyObjectToOpen
       value: 
       objectReference: {fileID: 1476946458}
-    - target: {fileID: 2065620347038782304, guid: 96e6ede77b9779145824546a769cc653, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2065620347038782305, guid: 96e6ede77b9779145824546a769cc653, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6922,10 +6918,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1829156613}
-    - target: {fileID: 7580162422221103577, guid: 96e6ede77b9779145824546a769cc653, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 4421715d25160894abbbfc5d88bfd391, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96e6ede77b9779145824546a769cc653, type: 3}
 --- !u!4 &2159192123675511926 stripped

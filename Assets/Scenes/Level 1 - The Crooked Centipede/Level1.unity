@@ -1168,8 +1168,8 @@ PrefabInstance:
       value: BlueBomb
       objectReference: {fileID: 0}
     - target: {fileID: 7105203581781684467, guid: 3625ba14478c49843b0731ff7e50f545, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7105203581781684471, guid: 3625ba14478c49843b0731ff7e50f545, type: 3}
       propertyPath: m_RootOrder
@@ -4915,11 +4915,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.007262436
+      value: 0.0072638947
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.005149345
+      value: -0.005150376
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -22,15 +22,20 @@ public class BombMovement : MonoBehaviour
         moveSpeed = bombSpeed.MoveSpeed;
     }
 
-    private void FixedUpdate() => AddVelocity();
+    private void Update()
+    {
+        if (waypoints.Length == 0) return;
+
+        Move();
+    }
     #endregion
 
     #region CLASS METHODS
-    private void AddVelocity()
+    private void Move()
     {
         var distanceFromWaypointToCurrentPosition = Vector3.Distance(waypoints[currentWaypointIndex].transform.position, transform.position);
 
-        if (distanceFromWaypointToCurrentPosition < 0.1)
+        if (distanceFromWaypointToCurrentPosition < MIN_DISTANCE)
         {
             if (++currentWaypointIndex >= waypoints.Length)
             {
@@ -38,7 +43,7 @@ public class BombMovement : MonoBehaviour
             }
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, Time.deltaTime * moveSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, moveSpeed * Time.deltaTime);
     }
     #endregion
 }
