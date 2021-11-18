@@ -6807,15 +6807,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5779671
+      value: 0.5779669
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0014445886
+      value: 0.0014859952
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0010225577
+      value: -0.0010517543
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6902,6 +6902,10 @@ PrefabInstance:
       propertyPath: doorBodyObjectToOpen
       value: 
       objectReference: {fileID: 1476946458}
+    - target: {fileID: 2065620347038782304, guid: 96e6ede77b9779145824546a769cc653, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2065620347038782305, guid: 96e6ede77b9779145824546a769cc653, type: 3}
       propertyPath: m_Mesh
       value: 
