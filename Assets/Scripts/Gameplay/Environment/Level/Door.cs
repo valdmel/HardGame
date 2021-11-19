@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     private const string CLOSE_TRIGGER = "Close";
 
     private Animator animator;
+    private bool isOpened = false;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -18,8 +19,21 @@ public class Door : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    public void Open() => animator.SetTrigger(OPEN_TRIGGER);
+    public void Open()
+    {
+        isOpened = true;
 
-    public void Close() => animator.SetTrigger(CLOSE_TRIGGER);
+        animator.SetTrigger(OPEN_TRIGGER);
+    }
+
+    public void Close()
+    {
+        if (isOpened)
+        {
+            isOpened = false;
+
+            animator.SetTrigger(CLOSE_TRIGGER);
+        }
+    }
     #endregion
 }

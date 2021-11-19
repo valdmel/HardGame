@@ -36,13 +36,17 @@ public class DoorButton : MonoBehaviour
     private void Press()
     {
         isPressed = true;
+
         animator.SetTrigger(PRESS_TRIGGER);
     }
 
     private void Release()
     {
-        isPressed = false;
-        animator.SetTrigger(RELEASE_TRIGGER);
+        if (isPressed)
+        {
+            isPressed = false;
+            animator.SetTrigger(RELEASE_TRIGGER);
+        }
     }
     #endregion
 }
