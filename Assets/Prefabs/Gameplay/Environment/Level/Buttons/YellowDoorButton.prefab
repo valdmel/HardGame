@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 2893795635949424412, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 296209c80355efe4dad4101c0d7beb8b, type: 2}
+      objectReference: {fileID: 2100000, guid: 64b8fa582aec85341bcb91cb3fdd14a0, type: 2}
     - target: {fileID: 2893795635949424413, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
       propertyPath: m_Mesh
       value: 
