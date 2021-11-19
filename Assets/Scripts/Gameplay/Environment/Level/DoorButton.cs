@@ -18,28 +18,28 @@ public class DoorButton : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Awake() => animator = GetComponent<Animator>();
 
-    private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += ReleaseButton;
+    private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += Release;
 
-    private void OnDisable() => PlayerBody.onPlayerTouchSuperBomb -= ReleaseButton;
+    private void OnDisable() => PlayerBody.onPlayerTouchSuperBomb -= Release;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.WasWithPlayerBody() && !isPressed)
         {
-            PressButton();
+            Press();
             doorBodyObjectToOpen.GetComponentInChildren<Door>().Open();
         }
     }
     #endregion
 
     #region CLASS METHODS
-    private void PressButton()
+    private void Press()
     {
         isPressed = true;
         animator.SetTrigger(PRESS_TRIGGER);
     }
 
-    private void ReleaseButton()
+    private void Release()
     {
         isPressed = false;
         animator.SetTrigger(RELEASE_TRIGGER);
