@@ -16,11 +16,7 @@ public class BombMovement : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Start()
-    {
-        transform.position = waypoints[0].transform.position;
-        moveSpeed = bombSpeed.MoveSpeed;
-    }
+    private void Start() => moveSpeed = bombSpeed.MoveSpeed;
 
     private void Update()
     {

@@ -140,6 +140,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombSpeed: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: []
