@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2749822313007970658, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
+      propertyPath: m_SelectedEdges.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2749822313007970658, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
+      propertyPath: m_SelectedFaces.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2749822313007970658, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2749822313007970661, guid: 41a8597b257ee9f4399c5533ce6efd43, type: 3}
       propertyPath: m_Name
       value: YellowDoorButton
