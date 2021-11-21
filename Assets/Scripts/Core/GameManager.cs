@@ -48,12 +48,6 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region CLASS METHODS
-    public void InitTime()
-    {
-        timeInSeconds = STARTING_TIME;
-        timeCoroutine = StartCoroutine(StartTime());
-    }
-
     public void StartLevel()
     {
         if (timeCoroutine == null)
@@ -62,6 +56,12 @@ public class GameManager : Singleton<GameManager>
         }
 
         onDeathCounterChange?.Invoke(deathCounter.ToString());
+    }
+
+    public void InitTime()
+    {
+        timeInSeconds = STARTING_TIME;
+        timeCoroutine = StartCoroutine(StartTime());
     }
 
     public void StopTime()
