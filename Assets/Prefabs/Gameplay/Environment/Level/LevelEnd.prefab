@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8228566630657560114}
   - component: {fileID: 8228566630657560115}
   - component: {fileID: 8228566630657560112}
-  - component: {fileID: 372511960}
-  - component: {fileID: 372511961}
+  - component: {fileID: 222428639757379010}
+  - component: {fileID: 1264448644}
   m_Layer: 0
   m_Name: LevelEnd
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8228566630657560118}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 1, z: -5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -165,24 +165,24 @@ MonoBehaviour:
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 5, y: 0, z: 0}
-  - {x: 0, y: 0.25, z: 0}
-  - {x: 5, y: 0.25, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 5, y: 1, z: 0}
   - {x: 5, y: 0, z: 0}
   - {x: 5, y: 0, z: -5}
-  - {x: 5, y: 0.25, z: 0}
-  - {x: 5, y: 0.25, z: -5}
+  - {x: 5, y: 1, z: 0}
+  - {x: 5, y: 1, z: -5}
   - {x: 5, y: 0, z: -5}
   - {x: 0, y: 0, z: -5}
-  - {x: 5, y: 0.25, z: -5}
-  - {x: 0, y: 0.25, z: -5}
+  - {x: 5, y: 1, z: -5}
+  - {x: 0, y: 1, z: -5}
   - {x: 0, y: 0, z: -5}
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0.25, z: -5}
-  - {x: 0, y: 0.25, z: 0}
-  - {x: 0, y: 0.25, z: 0}
-  - {x: 5, y: 0.25, z: 0}
-  - {x: 0, y: 0.25, z: -5}
-  - {x: 5, y: 0.25, z: -5}
+  - {x: 0, y: 1, z: -5}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 5, y: 1, z: 0}
+  - {x: 0, y: 1, z: -5}
+  - {x: 5, y: 1, z: -5}
   - {x: 0, y: 0, z: -5}
   - {x: 5, y: 0, z: -5}
   - {x: 0, y: 0, z: 0}
@@ -190,20 +190,20 @@ MonoBehaviour:
   m_Textures0:
   - {x: 0, y: 0}
   - {x: -5, y: 0}
-  - {x: 0, y: 0.25}
-  - {x: -5, y: 0.25}
+  - {x: 0, y: 1}
+  - {x: -5, y: 1}
   - {x: 0, y: 0}
   - {x: -5, y: 0}
-  - {x: 0, y: 0.25}
-  - {x: -5, y: 0.25}
+  - {x: 0, y: 1}
+  - {x: -5, y: 1}
   - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 5, y: 0.25}
-  - {x: 0, y: 0.25}
+  - {x: 5, y: 1}
+  - {x: 0, y: 1}
   - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 5, y: 0.25}
-  - {x: 0, y: 0.25}
+  - {x: 5, y: 1}
+  - {x: 0, y: 1}
   - {x: 0, y: 0}
   - {x: 5, y: 0}
   - {x: 0, y: -5}
@@ -315,7 +315,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!135 &372511960
+--- !u!135 &222428639757379010
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,9 +326,9 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.8664045
-  m_Center: {x: 2.5, y: 0.25, z: -2.5}
---- !u!114 &372511961
+  m_Radius: 1.75
+  m_Center: {x: 2.5, y: 0.5, z: -2.5}
+--- !u!114 &1264448644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
