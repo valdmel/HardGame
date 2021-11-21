@@ -6,6 +6,7 @@ public class BombRotation : MonoBehaviour
     #region SERIALIZABLE
     [Header("Rotation Properties")]
     [SerializeField] private GameObject target;
+    [SerializeField, Range(1, 180)] private int moveSpeed;
     #endregion
     #endregion
 
@@ -14,6 +15,6 @@ public class BombRotation : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    private void Rotate() => transform.RotateAround(target.transform.position, Vector3.up, 180 * Time.deltaTime);
+    private void Rotate() => transform.RotateAround(target.transform.position, Vector3.up, moveSpeed * Time.deltaTime);
     #endregion
 }
