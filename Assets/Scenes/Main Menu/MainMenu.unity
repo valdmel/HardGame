@@ -913,12 +913,16 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Music created by
 
-        Sound effects created using ChipTone (visit
+        Sound effects:
+
+        - ChipTone (visit
         https://sfbgames.itch.io/chiptone)
 
+        - Wobbleboxx (visit https://wobbleboxx.com/)
 
-        <align="center">Thank you for
-        playing!</align="center">'
+
+        <align="center">Thank
+        you for playing!</align="center">'
       objectReference: {fileID: 0}
     - target: {fileID: 7668981136225268440, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_RootOrder

@@ -882,7 +882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You are the <color=#EC346A>magenta</color> cube. Your goal is to reach
+  m_text: 'You are the <color=#84004D>magenta</color> cube. Your goal is to reach
     the <color=#EEA069>level exit</color> dying as less as possible.
 
     Avoid touching
