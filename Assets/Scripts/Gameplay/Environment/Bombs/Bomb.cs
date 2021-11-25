@@ -4,12 +4,12 @@ public class Bomb : MonoBehaviour
 {
     #region VARIABLES
     #region SERIALIZABLE
-    [Header("Behaviour Properties")]
-    [SerializeField] private BombBehaviour bombBehaviour;
+    [Header("Type Properties")]
+    [SerializeField] private BombType bombType;
     #endregion
     #endregion
 
     #region CLASS METHODS
-    public void ApplyBehaviourTo(GameObject gameObject) => bombBehaviour.ApplyTo(gameObject);
+    public void ApplyTypeBehaviourTo(GameObject gameObject) => bombType.ApplyTo(gameObject);
     #endregion
 }

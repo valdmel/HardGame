@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 119978729, guid: b446b44c1ed6d884d8ccc07c2d05d171, type: 3}
+      propertyPath: bombType
+      value: 
+      objectReference: {fileID: 11400000, guid: f11c66d3ba7f8a04caa4f57186d64ff2, type: 2}
     - target: {fileID: 7105203581781684467, guid: b446b44c1ed6d884d8ccc07c2d05d171, type: 3}
       propertyPath: m_Name
       value: RedBomb

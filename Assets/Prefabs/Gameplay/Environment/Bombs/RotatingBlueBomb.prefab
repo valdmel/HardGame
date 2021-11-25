@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 119978729, guid: b446b44c1ed6d884d8ccc07c2d05d171, type: 3}
+      propertyPath: bombType
+      value: 
+      objectReference: {fileID: 11400000, guid: 6177267059b593040bd0ba6ac239f0ec, type: 2}
     - target: {fileID: 7105203581781684467, guid: b446b44c1ed6d884d8ccc07c2d05d171, type: 3}
       propertyPath: m_Name
       value: RotatingBlueBomb
@@ -79,3 +83,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  moveSpeed: 0
