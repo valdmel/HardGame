@@ -7,7 +7,7 @@ public class BombMovement : MonoBehaviour
 
     #region SERIALIZABLE
     [Header("Movement Properties")]
-    [SerializeField] private BombSpeed bombSpeed;
+    [SerializeField, Range(0, 99)] private int bombSpeed;
     [SerializeField] private Transform[] waypoints;
     #endregion
 
@@ -19,7 +19,7 @@ public class BombMovement : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Start()
     {
-        moveSpeed = bombSpeed.MoveSpeed;
+        moveSpeed = bombSpeed;
 
         if (waypoints.Length == 0) return;
 
@@ -31,6 +31,11 @@ public class BombMovement : MonoBehaviour
         if (waypoints.Length == 0) return;
 
         Move();
+    }
+
+    private void OnValidate()
+    {
+        moveSpeed = bombSpeed;
     }
     #endregion
 

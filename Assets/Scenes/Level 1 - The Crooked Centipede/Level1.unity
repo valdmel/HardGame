@@ -3205,8 +3205,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: c780e902fdcfaf3499102db8be1ed41d, type: 2}
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
