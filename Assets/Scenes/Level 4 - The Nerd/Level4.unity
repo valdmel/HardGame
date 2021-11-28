@@ -579,6 +579,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1529602989}
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
+      propertyPath: bomb
+      value: 
+      objectReference: {fileID: 482748789}
+    - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -793,7 +797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8980135738321952918, guid: 7a6818310ed99bb45bd6f6c020b63858, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8980135738321952919, guid: 7a6818310ed99bb45bd6f6c020b63858, type: 3}
       propertyPath: m_RootOrder
@@ -1439,6 +1443,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &482748789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3166460096328954671, guid: abd27efeb1a97884e81021948aaac616, type: 3}
+  m_PrefabInstance: {fileID: 1179355555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &488931652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3105,6 +3114,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1529602989}
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
+      propertyPath: bombSpeed
+      value: 
+      objectReference: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
+    - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -3171,6 +3184,10 @@ PrefabInstance:
     - target: {fileID: 3166460096328954671, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: m_Name
       value: BlueBomb (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166460096328954671, guid: abd27efeb1a97884e81021948aaac616, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abd27efeb1a97884e81021948aaac616, type: 3}
@@ -9318,6 +9335,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1529602989}
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
+      propertyPath: bombSpeed
+      value: 
+      objectReference: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
+    - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -9384,6 +9405,10 @@ PrefabInstance:
     - target: {fileID: 3166460096328954671, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: m_Name
       value: BlueBomb (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166460096328954671, guid: abd27efeb1a97884e81021948aaac616, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abd27efeb1a97884e81021948aaac616, type: 3}

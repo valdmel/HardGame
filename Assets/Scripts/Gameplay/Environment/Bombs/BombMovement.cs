@@ -6,17 +6,22 @@ public class BombMovement : MonoBehaviour
     private const float MIN_DISTANCE = 0.1f;
 
     #region SERIALIZABLE
-     [Header("Movement Properties")]
-     [SerializeField] private BombSpeed bombSpeed;
-     [SerializeField] private Transform[] waypoints;
-     #endregion
+    [Header("Movement Properties")]
+    [SerializeField] private BombSpeed bombSpeed;
+    [SerializeField] private Transform[] waypoints;
+    #endregion
 
-     private int currentWaypointIndex = 0;
-     private float moveSpeed;
+    private int currentWaypointIndex = 0;
+    private Vector3 targetWaypoint;
+    private float moveSpeed;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Start() => moveSpeed = bombSpeed.MoveSpeed;
+    private void Start()
+    {
+        moveSpeed = bombSpeed.MoveSpeed;
+        targetWaypoint = waypoints[currentWaypointIndex].transform.position;
+    }
 
     private void Update()
     {
@@ -29,17 +34,22 @@ public class BombMovement : MonoBehaviour
     #region CLASS METHODS
     private void Move()
     {
-        var distanceFromWaypointToCurrentPosition = Vector3.Distance(waypoints[currentWaypointIndex].transform.position, transform.position);
+        var distanceFromWaypointToCurrentPosition = Vector3.Distance(targetWaypoint, transform.position);
+        var hasReachedWaypoint = distanceFromWaypointToCurrentPosition < MIN_DISTANCE;
 
-        if (distanceFromWaypointToCurrentPosition < MIN_DISTANCE)
+        if (hasReachedWaypoint)
         {
-            if (++currentWaypointIndex >= waypoints.Length)
-            {
-                currentWaypointIndex = 0;
-            }
+            SetNextWaypoint();
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, moveSpeed * Time.deltaTime);
+    }
+
+    private void SetNextWaypoint()
+    {
+        var hasReachedLastWaypoint = ++currentWaypointIndex >= waypoints.Length;
+        currentWaypointIndex = hasReachedLastWaypoint ? 0 : currentWaypointIndex;
+        targetWaypoint = waypoints[currentWaypointIndex].transform.position;
     }
     #endregion
 }
