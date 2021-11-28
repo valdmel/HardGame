@@ -1,15 +1,22 @@
 using UnityEngine;
 
-public class Bomb : MonoBehaviour
+public abstract class Bomb : MonoBehaviour
 {
     #region VARIABLES
     #region SERIALIZABLE
-    [Header("Type Properties")]
-    [SerializeField] private BombType bombType;
+    [SerializeField, Range(0, 180)] private int bombSpeed;
     #endregion
+
+    protected int moveSpeed;
+    #endregion
+
+    #region MONOBEHAVIOUR CALLBACK METHODS
+    private void Start() => Init();
+
+    private void OnValidate() => Init();
     #endregion
 
     #region CLASS METHODS
-    public void ApplyTypeBehaviourTo(GameObject gameObject) => bombType.ApplyTo(gameObject);
+    protected virtual void Init() => moveSpeed = bombSpeed;
     #endregion
 }

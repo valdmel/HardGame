@@ -184,8 +184,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -258,8 +258,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -332,8 +332,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -570,8 +570,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -644,8 +644,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -718,8 +718,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -792,8 +792,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -866,8 +866,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -1104,8 +1104,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -1243,6 +1243,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1410827455}
+    - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
+      propertyPath: bombSpeed
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -1428,8 +1432,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -1630,8 +1634,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -1704,8 +1708,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -1873,8 +1877,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -2147,8 +2151,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -2221,8 +2225,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -2295,8 +2299,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -3768,8 +3772,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -4005,6 +4009,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
+      propertyPath: bombSpeed
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
       objectReference: {fileID: 0}
@@ -4076,8 +4084,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -4242,8 +4250,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -4395,8 +4403,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -4559,8 +4567,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -5837,8 +5845,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -5911,8 +5919,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -6154,8 +6162,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -6392,8 +6400,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -6466,8 +6474,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -6572,8 +6580,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -6646,8 +6654,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -7207,8 +7215,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -7281,8 +7289,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85
@@ -7355,8 +7363,8 @@ PrefabInstance:
       objectReference: {fileID: 1410827455}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: bombSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: 8860238c96dbcf44e886502194de6e70, type: 2}
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7849221338056763305, guid: 8c9712182ba55074e92a866489f9c4b5, type: 3}
       propertyPath: moveSpeed
       value: 85

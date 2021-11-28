@@ -22,7 +22,7 @@ public class PlayerBody : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var bomb = other.GetComponent<Bomb>();
+        var bomb = other.GetComponent<BombBehaviour>();
 
         if (bomb)
         {
