@@ -20,6 +20,9 @@ public class BombMovement : MonoBehaviour
     private void Start()
     {
         moveSpeed = bombSpeed.MoveSpeed;
+
+        if (waypoints.Length == 0) return;
+
         targetWaypoint = waypoints[currentWaypointIndex].transform.position;
     }
 
