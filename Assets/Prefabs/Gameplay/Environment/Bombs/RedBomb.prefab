@@ -79,8 +79,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389639546023579759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560e4ff6da64818408e6c935e3bc4d9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d6dbd2f636cd5944ba7b291f2332b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombSpeed: {fileID: 11400000, guid: 34f28ddc66c3ff340ad0825d588370a8, type: 2}
+  bombSpeed: 0
   waypoints: []
