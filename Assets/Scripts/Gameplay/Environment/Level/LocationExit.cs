@@ -5,18 +5,17 @@ using UnityEngine.Events;
 public class LocationExit : MonoBehaviour
 {
     #region VARIABLES
+    private const int WAIT_TIME = 1;
+
     #region SERIALIZABLE
     [Header("Events Properties")]
     [SerializeField] private UnityEvent onLevelFinish;
     #endregion
 
-    private AudioSource audioSource;
     private bool hasLevelFinished = false;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Awake() => audioSource = GetComponent<AudioSource>();
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.WasWithPlayerBody() && !hasLevelFinished)
@@ -33,9 +32,7 @@ public class LocationExit : MonoBehaviour
     {
         hasLevelFinished = true;
 
-        audioSource.Play();
-
-        yield return new WaitUntil(() => !audioSource.isPlaying);
+        yield return new WaitForSeconds(WAIT_TIME);
 
         playerController.DisableMovement();
         GameManager.Instance.StopTime();

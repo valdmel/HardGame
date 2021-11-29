@@ -12,7 +12,6 @@ public class DoorButton : MonoBehaviour
     #endregion
 
     private Animator animator;
-    private AudioSource audioSource;
     private bool isPressed = false;
     #endregion
 
@@ -20,7 +19,6 @@ public class DoorButton : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += Release;
@@ -42,7 +40,6 @@ public class DoorButton : MonoBehaviour
     {
         isPressed = true;
 
-        audioSource.Play();
         animator.SetTrigger(PRESS_TRIGGER);
     }
 
