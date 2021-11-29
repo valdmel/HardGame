@@ -265,7 +265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 201357683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c77975c79b11643bbe5df4a0300cd5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b615ba4b7f5d4141ac84f22540b5e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &481672233 stripped
@@ -1051,19 +1051,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245391497149066520, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_text
-      value: 'Music created by Subdream (visit https://soundcloud.com/subdream)
-
-        Sound
-        effects:
-
-        - ChipTone (visit https://sfbgames.itch.io/chiptone)
-
-        -
-        Wobbleboxx (visit https://wobbleboxx.com/)
-
-
-        <align="center">Thank
-        you for playing!</align="center">'
+      value: "Music: \nSpace Philately (+ seamless loop) by Subdream (visit https://soundcloud.com/subdream)\n\nSound
+        effects:\nChipTone (visit https://sfbgames.itch.io/chiptone)\n\n<align=\"center\">Thank
+        you for playing!</align=\"center\">"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245391497149066520, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7668981136225268440, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_RootOrder
