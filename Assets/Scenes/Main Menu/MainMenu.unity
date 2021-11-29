@@ -495,15 +495,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.130209
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6772285
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.661356
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_LocalRotation.w
@@ -511,15 +511,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802888157466419388, guid: 17906b730468a444e891ff4dde578080, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1048,16 +1048,6 @@ PrefabInstance:
     - target: {fileID: 7245391496070346670, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_Name
       value: CreditsUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7245391497149066520, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
-      propertyPath: m_text
-      value: "Music: \nSpace Philately (+ seamless loop) by Subdream (visit https://soundcloud.com/subdream)\n\nSound
-        effects:\nChipTone (visit https://sfbgames.itch.io/chiptone)\n\n<align=\"center\">Thank
-        you for playing!</align=\"center\">"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7245391497149066520, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
-      propertyPath: m_fontStyle
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7668981136225268440, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_RootOrder
