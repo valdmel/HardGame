@@ -50,11 +50,11 @@ public class GameManager : Singleton<GameManager>
     #region CLASS METHODS
     public void StartLevel()
     {
-        if (timeCoroutine == null)
+/*        if (timeCoroutine == null)
         {
             InitTime();
         }
-
+*/
         onDeathCounterChange?.Invoke(deathCounter.ToString());
     }
 
