@@ -4151,7 +4151,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: bombSpeed
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
@@ -4393,7 +4393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: bombSpeed
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
