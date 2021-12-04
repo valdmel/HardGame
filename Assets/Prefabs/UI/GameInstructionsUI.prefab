@@ -795,7 +795,7 @@ MonoBehaviour:
     the whole level to its original state.
 
     Some <color=#EEA069>level exits</color>
-    are blocked by doors and can only be opened by pressing <color=#A9C5F8>switches</color>
+    are blocked by doors that can only be opened by pressing <color=#A9C5F8>switches</color>
     matching the door''s colour.
 
 
