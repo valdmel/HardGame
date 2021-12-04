@@ -8,6 +8,7 @@ public class HUD : MonoBehaviour
     [Header("HUD Properties")]
     [SerializeField] private TMP_Text deathCounterText;
     [SerializeField] private TMP_Text timerText;
+    [SerializeField] private GameObject timer;
     #endregion
     #endregion
 
@@ -18,7 +19,7 @@ public class HUD : MonoBehaviour
         GameManager.onTimeChange += DisplayTime;
     }
 
-/*    private void Start() => DisplayDeathCounter(GameManager.Instance.DeathCounter.ToString());*/
+    private void Start() => ActivateTimer();
 
     private void OnDisable()
     {
@@ -31,5 +32,12 @@ public class HUD : MonoBehaviour
     public void DisplayDeathCounter(string deathCounter) => deathCounterText.text = deathCounter;
 
     public void DisplayTime(string time) => timerText.text = time;
+
+    private void ActivateTimer()
+    {
+        var activateTimer = GameManager.Instance.IsNormalGameModeActive() ? false : true;
+
+        timer.SetActive(activateTimer);
+    }
     #endregion
 }

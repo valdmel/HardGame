@@ -501,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathCounterText: {fileID: 555116125}
   timerText: {fileID: 1211540206}
+  timer: {fileID: 8789822864697168581}
 --- !u!1 &8359988919246500602
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &245726134545129941
 RectTransform:
   m_ObjectHideFlags: 0

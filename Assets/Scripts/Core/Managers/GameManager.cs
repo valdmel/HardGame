@@ -29,6 +29,7 @@ public class GameManager : Singleton<GameManager>
     private Coroutine timeCoroutine;
 
     public bool IsGamePaused { get => isGamePaused; set => isGamePaused = value; }
+    public int ActiveGameMode { get => activeGameMode; set => activeGameMode = value; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -50,11 +51,10 @@ public class GameManager : Singleton<GameManager>
     #region CLASS METHODS
     public void StartLevel()
     {
-/*        if (timeCoroutine == null)
-        {
-            InitTime();
-        }
-*/
+        var canActivateTimer = !IsNormalGameModeActive() && timeCoroutine == null;
+
+        if (canActivateTimer) InitTime();
+
         onDeathCounterChange?.Invoke(deathCounter.ToString());
     }
 
@@ -80,6 +80,8 @@ public class GameManager : Singleton<GameManager>
 
     public void PauseGame() => onGamePause?.Invoke();
 
+    public bool IsNormalGameModeActive() => activeGameMode.Equals((int)GameMode.NORMAL);
+
     private IEnumerator StartTime()
     {
         var minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
@@ -99,8 +101,6 @@ public class GameManager : Singleton<GameManager>
     private void UpdateDeathCounter() => onDeathCounterChange?.Invoke((++deathCounter).ToString());
 
     private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TIMESPAN_PATTERN);
-
-    private bool IsNormalGameModeActive() => activeGameMode.Equals((int)GameMode.NORMAL);
 
     private void OnSceneLoad(Scene scene, LoadSceneMode mode) => onDeathCounterChange?.Invoke(deathCounter.ToString());
     #endregion
