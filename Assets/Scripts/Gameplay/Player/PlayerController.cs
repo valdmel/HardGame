@@ -42,16 +42,9 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.PauseGame();
 
-            switch (GameManager.Instance.IsGamePaused)
-            {
-                case true:
-                    playerInput.SwitchCurrentActionMap(PAUSE_ACTION_MAP);
-                    break;
+            var activeActionMap = GameManager.Instance.IsGamePaused ? PAUSE_ACTION_MAP : PLAYER_ACTION_MAP;
 
-                case false:
-                    playerInput.SwitchCurrentActionMap(PLAYER_ACTION_MAP);
-                    break;
-            }
+            playerInput.SwitchCurrentActionMap(activeActionMap);
         }
     }
 
