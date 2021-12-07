@@ -243,17 +243,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8228566630657560113, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
   m_PrefabInstance: {fileID: 117931737}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &143064676 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3166460096328954671, guid: abd27efeb1a97884e81021948aaac616, type: 3}
-  m_PrefabInstance: {fileID: 606479626}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &143064677 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
   m_PrefabInstance: {fileID: 606479626}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143064676}
+  m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d6dbd2f636cd5944ba7b291f2332b1b, type: 3}
@@ -4498,9 +4493,5 @@ PrefabInstance:
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 143064677}
-    - target: {fileID: 1882903155979633896, guid: 242a4724d03c3e342b023d90b25d911f, type: 3}
-      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 143064676}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 242a4724d03c3e342b023d90b25d911f, type: 3}
