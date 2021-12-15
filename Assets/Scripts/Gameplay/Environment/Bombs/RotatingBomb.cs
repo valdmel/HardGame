@@ -5,7 +5,7 @@ public class RotatingBomb : Bomb
     #region VARIABLES
     #region SERIALIZABLE
     [Header("Rotation Properties")]
-    [SerializeField] private GameObject target;
+    [SerializeField] private GameObject rotationTarget;
     #endregion
     #endregion
 
@@ -14,6 +14,6 @@ public class RotatingBomb : Bomb
     #endregion
 
     #region CLASS METHODS
-    private void Rotate() => transform.RotateAround(target.transform.position, Vector3.up, moveSpeed * Time.deltaTime);
+    private void Rotate() => transform.RotateAround(rotationTarget.transform.position, Vector3.up, moveSpeed * Time.deltaTime);
     #endregion
 }
