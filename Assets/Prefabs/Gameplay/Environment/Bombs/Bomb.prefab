@@ -125,4 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d44e4bdb475b32409ed3e05f9e894ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombBehaviour: {fileID: 11400000, guid: 6177267059b593040bd0ba6ac239f0ec, type: 2}
+  bombType: {fileID: 0}

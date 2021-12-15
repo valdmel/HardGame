@@ -4,7 +4,7 @@ public abstract class Bomb : MonoBehaviour
 {
     #region VARIABLES
     #region SERIALIZABLE
-    [SerializeField, Range(0, 180)] private int bombSpeed;
+    [SerializeField, Range(-180, 180)] private int bombSpeed;
     #endregion
 
     protected int moveSpeed;
