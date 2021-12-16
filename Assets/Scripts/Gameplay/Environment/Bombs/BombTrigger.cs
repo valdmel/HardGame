@@ -16,7 +16,7 @@ public class BombTrigger : MonoBehaviour
         if (other.WasWithPlayerBody())
         {
             onEnter?.Invoke();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     #endregion
