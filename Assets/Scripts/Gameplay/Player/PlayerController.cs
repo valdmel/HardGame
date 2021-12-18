@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     #region VARIABLES
-    private const string PLAYER_ACTION_MAP = "Player";
-    private const string PAUSE_ACTION_MAP = "Pause";
+    private const string PlayerActionMap = "Player";
+    private const string PauseActionMap = "Pause";
 
     #region SERIALIZABLE
     [Header("Player Properties")]
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.PauseGame();
 
-            var activeActionMap = GameManager.Instance.IsGamePaused ? PAUSE_ACTION_MAP : PLAYER_ACTION_MAP;
+            var activeActionMap = GameManager.Instance.IsGamePaused ? PauseActionMap : PlayerActionMap;
 
             playerInput.SwitchCurrentActionMap(activeActionMap);
         }

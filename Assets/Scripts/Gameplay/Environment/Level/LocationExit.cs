@@ -5,14 +5,14 @@ using UnityEngine.Events;
 public class LocationExit : MonoBehaviour
 {
     #region VARIABLES
-    private const int WAIT_TIME = 1;
+    private const int WaitTime = 1;
 
     #region SERIALIZABLE
     [Header("Events Properties")]
     [SerializeField] private UnityEvent onLevelFinish;
     #endregion
 
-    private bool hasLevelFinished = false;
+    private bool hasLevelFinished;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -32,7 +32,7 @@ public class LocationExit : MonoBehaviour
     {
         hasLevelFinished = true;
 
-        yield return new WaitForSeconds(WAIT_TIME);
+        yield return new WaitForSeconds(WaitTime);
 
         playerController.DisableMovement();
         GameManager.Instance.StopTime();

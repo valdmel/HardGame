@@ -3,7 +3,7 @@ using UnityEngine;
 public class GamePause : MonoBehaviour
 {
     #region VARIABLES
-    private const float GAME_DEFAULT_TIMESCALE = 1f;
+    private const float GameDefaultTimescale = 1f;
 
     #region SERIALIZABLE
     [Header("Pause Properties")]
@@ -25,7 +25,7 @@ public class GamePause : MonoBehaviour
     #region CLASS METHODS
     private void PauseGame()
     {
-        Time.timeScale = GAME_DEFAULT_TIMESCALE - Time.timeScale;
+        Time.timeScale = GameDefaultTimescale - Time.timeScale;
         GameManager.Instance.IsGamePaused = !GameManager.Instance.IsGamePaused;
 
         ActivatePauseMenu();

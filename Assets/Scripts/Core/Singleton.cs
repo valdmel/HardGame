@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class Singleton<T> : MonoBehaviour where T : Component
 {
     #region VARIABLES
-    private const string SINGLETON_TAG = "(Singleton)";
+    private const string SingletonTag = "(Singleton)";
 
     private static T instance;
     public static T Instance
@@ -16,7 +16,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
 
                 if (instance == null)
                 {
-                    instance = new GameObject(typeof(T).Name + SINGLETON_TAG).AddComponent<T>();
+                    instance = new GameObject(typeof(T).Name + SingletonTag).AddComponent<T>();
                 }
             }
 
@@ -31,7 +31,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
         if (instance == null)
         {
             instance = this as T;
-            instance.name = typeof(T).Name + SINGLETON_TAG;
+            instance.name = typeof(T).Name + SingletonTag;
 
             DontDestroyOnLoad(gameObject);
         }

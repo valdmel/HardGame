@@ -3,11 +3,11 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     #region VARIABLES
-    private const string OPEN_TRIGGER = "Open";
-    private const string CLOSE_TRIGGER = "Close";
+    private const string OpenTrigger = "Open";
+    private const string CloseTrigger = "Close";
 
     private Animator animator;
-    private bool isOpened = false;
+    private bool isOpened;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -23,17 +23,16 @@ public class Door : MonoBehaviour
     {
         isOpened = true;
 
-        animator.SetTrigger(OPEN_TRIGGER);
+        animator.SetTrigger(OpenTrigger);
     }
 
     public void Close()
     {
-        if (isOpened)
-        {
-            isOpened = false;
+        if (!isOpened) return;
+        
+        isOpened = false;
 
-            animator.SetTrigger(CLOSE_TRIGGER);
-        }
+        animator.SetTrigger(CloseTrigger);
     }
     #endregion
 }

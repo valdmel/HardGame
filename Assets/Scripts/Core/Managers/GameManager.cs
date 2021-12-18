@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     #region VARIABLES
-    private const string TIMESPAN_PATTERN = @"mm\:ss";
-    private const int MAX_MINUTES = 60;
-    private const int STARTING_TIME = 0;
-    private const float DECREASING_TIME_IN_SECONDS = 1f;
+    private const string TimespanPattern = @"mm\:ss";
+    private const int MaxMinutes = 60;
+    private const int StartingTime = 0;
+    private const float DecreasingTimeInSeconds = 1f;
 
     private enum GameMode
     {
-        NORMAL = 0,
-        SPEEDRUN = 1
+        Normal = 0,
+        Speedrun = 1
     }
 
     public static Action<string> onDeathCounterChange;
@@ -23,13 +23,11 @@ public class GameManager : Singleton<GameManager>
     public static Action onTimeMax;
 
     private int activeGameMode;
-    private int deathCounter = 0;
+    private int deathCounter;
     private int timeInSeconds;
-    private bool isGamePaused = false;
     private Coroutine timeCoroutine;
 
-    public bool IsGamePaused { get => isGamePaused; set => isGamePaused = value; }
-    public int ActiveGameMode { get => activeGameMode; set => activeGameMode = value; }
+    public bool IsGamePaused { get; set; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -60,7 +58,7 @@ public class GameManager : Singleton<GameManager>
 
     public void InitTime()
     {
-        timeInSeconds = STARTING_TIME;
+        timeInSeconds = StartingTime;
         timeCoroutine = StartCoroutine(StartTime());
     }
 
@@ -74,25 +72,25 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void ActivateNormalGameMode() => activeGameMode = (int)GameMode.NORMAL;
+    public void ActivateNormalGameMode() => activeGameMode = (int)GameMode.Normal;
 
-    public void ActivateSpeedrunGameMode() => activeGameMode = (int)GameMode.SPEEDRUN;
+    public void ActivateSpeedrunGameMode() => activeGameMode = (int)GameMode.Speedrun;
 
     public void PauseGame() => onGamePause?.Invoke();
 
-    public bool IsNormalGameModeActive() => activeGameMode.Equals((int)GameMode.NORMAL);
+    public bool IsNormalGameModeActive() => activeGameMode.Equals((int)GameMode.Normal);
 
     private IEnumerator StartTime()
     {
         var minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
 
-        while (minutesFromSeconds <= MAX_MINUTES)
+        while (minutesFromSeconds <= MaxMinutes)
         {
             onTimeChange?.Invoke(TimeInSecondsToString(++timeInSeconds));
 
             minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
 
-            yield return new WaitForSeconds(DECREASING_TIME_IN_SECONDS);
+            yield return new WaitForSeconds(DecreasingTimeInSeconds);
         }
 
         onTimeMax?.Invoke();
@@ -100,7 +98,7 @@ public class GameManager : Singleton<GameManager>
 
     private void UpdateDeathCounter() => onDeathCounterChange?.Invoke((++deathCounter).ToString());
 
-    private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TIMESPAN_PATTERN);
+    private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TimespanPattern);
 
     private void OnSceneLoad(Scene scene, LoadSceneMode mode) => onDeathCounterChange?.Invoke(deathCounter.ToString());
     #endregion

@@ -3,7 +3,7 @@ using UnityEngine;
 public class MovingBomb : Bomb
 {
     #region VARIABLES
-    private const float MIN_DISTANCE = 0.1f;
+    private const float MinDistance = 0.1f;
 
     #region SERIALIZABLE
     [Header("Movement Properties")]
@@ -38,7 +38,7 @@ public class MovingBomb : Bomb
     private void Move()
     {
         var distanceFromWaypointToCurrentPosition = Vector3.Distance(targetWaypoint, transform.position);
-        var hasReachedWaypoint = distanceFromWaypointToCurrentPosition < MIN_DISTANCE;
+        var hasReachedWaypoint = distanceFromWaypointToCurrentPosition < MinDistance;
 
         if (hasReachedWaypoint)
         {

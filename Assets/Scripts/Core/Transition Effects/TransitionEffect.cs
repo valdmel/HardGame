@@ -5,8 +5,8 @@ using UnityEngine.Events;
 public class TransitionEffect : MonoBehaviour
 {
     #region VARIABLES
-    private const string FINISH_TRANSITION_TRIGGER = "FinishTransition";
-    private const float ANIMATOR_STOP_SPEED = 0;
+    private const string FinishTransitionTrigger = "FinishTransition";
+    private const float AnimatorStopSpeed = 0;
 
     #region SERIALIZABLE
     [Header("Events Properties")]
@@ -20,9 +20,9 @@ public class TransitionEffect : MonoBehaviour
     [SerializeField, Min(0)] private float transitionDurationInSeconds = 1f;
     #endregion
 
-    private bool isFinished = false;
+    private bool isFinished;
 
-    public bool IsFinished { get => isFinished; }
+    public bool IsFinished => isFinished;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -32,13 +32,13 @@ public class TransitionEffect : MonoBehaviour
     #region CLASS METHODS
     public void ContinueTransition()
     {
-        animator.SetTrigger(FINISH_TRANSITION_TRIGGER);
+        animator.SetTrigger(FinishTransitionTrigger);
         StartCoroutine(PlayTransitionAnimation());
     }
 
     private IEnumerator PlayTransitionAnimation()
     {
-        animator.speed = ANIMATOR_STOP_SPEED;
+        animator.speed = AnimatorStopSpeed;
 
         yield return new WaitForSeconds(transitionDurationInSeconds);
 

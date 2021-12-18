@@ -3,8 +3,8 @@ using UnityEngine;
 public class DoorButton : MonoBehaviour
 {
     #region VARIABLES
-    private const string PRESS_TRIGGER = "Press";
-    private const string RELEASE_TRIGGER = "Release";
+    private const string PressTrigger = "Press";
+    private const string ReleaseTrigger = "Release";
 
     #region SERIALIZABLE
     [Header("Door Button Properties")]
@@ -12,14 +12,11 @@ public class DoorButton : MonoBehaviour
     #endregion
 
     private Animator animator;
-    private bool isPressed = false;
+    private bool isPressed;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
+    private void Awake() => animator = GetComponent<Animator>();
 
     private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += Release;
 
@@ -27,11 +24,10 @@ public class DoorButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.WasWithPlayerBody() && !isPressed)
-        {
-            Press();
-            doorBodyObjectToOpen.GetComponentInChildren<Door>().Open();
-        }
+        if (!other.WasWithPlayerBody() || isPressed) return;
+        
+        Press();
+        doorBodyObjectToOpen.GetComponentInChildren<Door>().Open();
     }
     #endregion
 
@@ -40,17 +36,16 @@ public class DoorButton : MonoBehaviour
     {
         isPressed = true;
 
-        animator.SetTrigger(PRESS_TRIGGER);
+        animator.SetTrigger(PressTrigger);
     }
 
     private void Release()
     {
-        if (isPressed)
-        {
-            isPressed = false;
+        if (!isPressed) return;
+        
+        isPressed = false;
 
-            animator.SetTrigger(RELEASE_TRIGGER);
-        }
+        animator.SetTrigger(ReleaseTrigger);
     }
     #endregion
 }
