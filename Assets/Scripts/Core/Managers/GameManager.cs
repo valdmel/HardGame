@@ -17,10 +17,10 @@ public class GameManager : Singleton<GameManager>
         Speedrun = 1
     }
 
-    public static Action<string> onDeathCounterChange;
-    public static Action<string> onTimeChange;
-    public static Action onGamePause;
-    public static Action onTimeMax;
+    public static Action<string> OnDeathCounterChange;
+    public static Action<string> OnTimeChange;
+    public static Action OnGamePause;
+    public static Action OnTimeMax;
 
     private int activeGameMode;
     private int deathCounter;
@@ -34,15 +34,15 @@ public class GameManager : Singleton<GameManager>
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoad;
-        PlayerBody.onPlayerTouchBomb += UpdateDeathCounter;
-        PlayerBody.onPlayerTouchSuperBomb += UpdateDeathCounter;
+        PlayerBody.OnPlayerTouchBomb += UpdateDeathCounter;
+        PlayerBody.OnPlayerTouchSuperBomb += UpdateDeathCounter;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoad;
-        PlayerBody.onPlayerTouchBomb -= UpdateDeathCounter;
-        PlayerBody.onPlayerTouchSuperBomb -= UpdateDeathCounter;
+        PlayerBody.OnPlayerTouchBomb -= UpdateDeathCounter;
+        PlayerBody.OnPlayerTouchSuperBomb -= UpdateDeathCounter;
     }
     #endregion
 
@@ -53,7 +53,7 @@ public class GameManager : Singleton<GameManager>
 
         if (canActivateTimer) InitTime();
 
-        onDeathCounterChange?.Invoke(deathCounter.ToString());
+        OnDeathCounterChange?.Invoke(deathCounter.ToString());
     }
 
     public void InitTime()
@@ -76,7 +76,7 @@ public class GameManager : Singleton<GameManager>
 
     public void ActivateSpeedrunGameMode() => activeGameMode = (int)GameMode.Speedrun;
 
-    public void PauseGame() => onGamePause?.Invoke();
+    public void PauseGame() => OnGamePause?.Invoke();
 
     public bool IsNormalGameModeActive() => activeGameMode.Equals((int)GameMode.Normal);
 
@@ -86,20 +86,20 @@ public class GameManager : Singleton<GameManager>
 
         while (minutesFromSeconds <= MaxMinutes)
         {
-            onTimeChange?.Invoke(TimeInSecondsToString(++timeInSeconds));
+            OnTimeChange?.Invoke(TimeInSecondsToString(++timeInSeconds));
 
             minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
 
             yield return new WaitForSeconds(DecreasingTimeInSeconds);
         }
 
-        onTimeMax?.Invoke();
+        OnTimeMax?.Invoke();
     }
 
-    private void UpdateDeathCounter() => onDeathCounterChange?.Invoke((++deathCounter).ToString());
+    private void UpdateDeathCounter() => OnDeathCounterChange?.Invoke((++deathCounter).ToString());
 
     private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TimespanPattern);
 
-    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => onDeathCounterChange?.Invoke(deathCounter.ToString());
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => OnDeathCounterChange?.Invoke(deathCounter.ToString());
     #endregion
 }

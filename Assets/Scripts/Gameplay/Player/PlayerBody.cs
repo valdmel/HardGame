@@ -4,8 +4,8 @@ using UnityEngine;
 public class PlayerBody : MonoBehaviour
 {
     #region VARIABLES
-    public static Action onPlayerTouchBomb;
-    public static Action onPlayerTouchSuperBomb;
+    public static Action OnPlayerTouchBomb;
+    public static Action OnPlayerTouchSuperBomb;
 
     #region SERIALIZABLE
     [Header("Audio Properties")]
@@ -15,9 +15,9 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => GameManager.onTimeMax += Kill;
+    private void OnEnable() => GameManager.OnTimeMax += Kill;
 
-    private void OnDisable() => GameManager.onTimeMax -= Kill;
+    private void OnDisable() => GameManager.OnTimeMax -= Kill;
 
     private void OnTriggerEnter(Collider other)
     {

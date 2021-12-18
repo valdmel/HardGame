@@ -38,14 +38,13 @@ public class PlayerController : MonoBehaviour
     {
         var canPauseGame = inputContext.performed;
 
-        if (canPauseGame)
-        {
-            GameManager.Instance.PauseGame();
+        if (!canPauseGame) return;
+        
+        GameManager.Instance.PauseGame();
 
-            var activeActionMap = GameManager.Instance.IsGamePaused ? PauseActionMap : PlayerActionMap;
+        var activeActionMap = GameManager.Instance.IsGamePaused ? PauseActionMap : PlayerActionMap;
 
-            playerInput.SwitchCurrentActionMap(activeActionMap);
-        }
+        playerInput.SwitchCurrentActionMap(activeActionMap);
     }
 
     public void DisableMovement() => playerInput.enabled = false;

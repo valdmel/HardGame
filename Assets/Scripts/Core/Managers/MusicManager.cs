@@ -14,9 +14,9 @@ public class MusicManager : Singleton<MusicManager>
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnEnable() => GameManager.onGamePause += HandleAudio;
+    private void OnEnable() => GameManager.OnGamePause += HandleAudio;
 
-    private void OnDisable() => GameManager.onGamePause -= HandleAudio;
+    private void OnDisable() => GameManager.OnGamePause -= HandleAudio;
     #endregion
 
     #region CLASS METHODS

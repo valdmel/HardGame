@@ -18,16 +18,16 @@ public class BombResetPosition : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnEnable()
     {
-        PlayerBody.onPlayerTouchBomb += ResetPosition;
-        PlayerBody.onPlayerTouchSuperBomb += ResetPosition;
+        PlayerBody.OnPlayerTouchBomb += ResetPosition;
+        PlayerBody.OnPlayerTouchSuperBomb += ResetPosition;
     }
 
     private void Start() => startingPosition = transform.position;
 
     private void OnDisable()
     {
-        PlayerBody.onPlayerTouchBomb -= ResetPosition;
-        PlayerBody.onPlayerTouchSuperBomb -= ResetPosition;
+        PlayerBody.OnPlayerTouchBomb -= ResetPosition;
+        PlayerBody.OnPlayerTouchSuperBomb -= ResetPosition;
     }
 
     #endregion

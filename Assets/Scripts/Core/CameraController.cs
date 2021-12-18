@@ -14,9 +14,9 @@ public class CameraController : MonoBehaviour
         cinemachineCamera = mainCamera.GetComponentInChildren<CinemachineVirtualCamera>();
     }
 
-    private void OnEnable() => PlayerSpawner.onPlayerSpawn += AttachTo;
+    private void OnEnable() => PlayerSpawner.OnPlayerSpawn += AttachTo;
 
-    private void OnDisable() => PlayerSpawner.onPlayerSpawn -= AttachTo;
+    private void OnDisable() => PlayerSpawner.OnPlayerSpawn -= AttachTo;
     #endregion
 
     #region CLASS METHODS

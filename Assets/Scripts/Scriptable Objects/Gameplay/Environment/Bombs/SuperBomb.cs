@@ -6,7 +6,7 @@ public class SuperBomb : BombType
     #region CLASS METHODS
     public override void ApplyTo(GameObject objectToBeAffected)
     {
-        PlayerBody.onPlayerTouchSuperBomb?.Invoke();
+        PlayerBody.OnPlayerTouchSuperBomb?.Invoke();
         base.ApplyTo(objectToBeAffected);
     }
     #endregion

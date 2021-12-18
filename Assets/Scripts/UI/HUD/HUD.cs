@@ -15,16 +15,16 @@ public class HUD : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnEnable()
     {
-        GameManager.onDeathCounterChange += DisplayDeathCounter;
-        GameManager.onTimeChange += DisplayTime;
+        GameManager.OnDeathCounterChange += DisplayDeathCounter;
+        GameManager.OnTimeChange += DisplayTime;
     }
 
     private void Start() => ActivateTimer();
 
     private void OnDisable()
     {
-        GameManager.onDeathCounterChange -= DisplayDeathCounter;
-        GameManager.onTimeChange -= DisplayTime;
+        GameManager.OnDeathCounterChange -= DisplayDeathCounter;
+        GameManager.OnTimeChange -= DisplayTime;
     }
     #endregion
 

@@ -13,11 +13,10 @@ public class BombTrigger : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnTriggerEnter(Collider other)
     {
-        if (other.WasWithPlayerBody())
-        {
-            onEnter?.Invoke();
-            gameObject.SetActive(false);
-        }
+        if (!other.WasWithPlayerBody()) return;
+        
+        onEnter?.Invoke();
+        gameObject.SetActive(false);
     }
     #endregion
 }

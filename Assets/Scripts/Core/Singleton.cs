@@ -10,14 +10,13 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
     {
         get
         {
+            if (instance != null) return instance;
+            
+            instance = FindObjectOfType<T>();
+
             if (instance == null)
             {
-                instance = FindObjectOfType<T>();
-
-                if (instance == null)
-                {
-                    instance = new GameObject(typeof(T).Name + SingletonTag).AddComponent<T>();
-                }
+                instance = new GameObject(typeof(T).Name + SingletonTag).AddComponent<T>();
             }
 
             return instance;

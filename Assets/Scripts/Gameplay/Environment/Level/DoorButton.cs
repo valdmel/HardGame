@@ -18,9 +18,9 @@ public class DoorButton : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Awake() => animator = GetComponent<Animator>();
 
-    private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += Release;
+    private void OnEnable() => PlayerBody.OnPlayerTouchSuperBomb += Release;
 
-    private void OnDisable() => PlayerBody.onPlayerTouchSuperBomb -= Release;
+    private void OnDisable() => PlayerBody.OnPlayerTouchSuperBomb -= Release;
 
     private void OnTriggerEnter(Collider other)
     {

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerSpawner : MonoBehaviour
 {
     #region VARIABLES
-    public static Action<GameObject> onPlayerSpawn;
+    public static Action<GameObject> OnPlayerSpawn;
 
     #region SERIALIZABLE
     [Header("Spawner Properties")]
@@ -20,16 +20,16 @@ public class PlayerSpawner : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnEnable()
     {
-        PlayerBody.onPlayerTouchBomb += InitSpawn;
-        PlayerBody.onPlayerTouchSuperBomb += InitSpawn;
+        PlayerBody.OnPlayerTouchBomb += InitSpawn;
+        PlayerBody.OnPlayerTouchSuperBomb += InitSpawn;
     }
 
     private void Start() => InitSpawn();
 
     private void OnDisable()
     {
-        PlayerBody.onPlayerTouchBomb -= InitSpawn;
-        PlayerBody.onPlayerTouchSuperBomb -= InitSpawn;
+        PlayerBody.OnPlayerTouchBomb -= InitSpawn;
+        PlayerBody.OnPlayerTouchSuperBomb -= InitSpawn;
     }
     #endregion
 
@@ -49,7 +49,7 @@ public class PlayerSpawner : MonoBehaviour
 
         var playerObject = Instantiate(playerObjectToSpawn, transform.position, Quaternion.identity);
 
-        onPlayerSpawn?.Invoke(playerObject);
+        OnPlayerSpawn?.Invoke(playerObject);
 
         if (oldPlayerObject)
         {

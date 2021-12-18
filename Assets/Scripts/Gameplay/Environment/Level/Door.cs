@@ -13,9 +13,9 @@ public class Door : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Awake() => animator = GetComponent<Animator>();
 
-    private void OnEnable() => PlayerBody.onPlayerTouchSuperBomb += Close;
+    private void OnEnable() => PlayerBody.OnPlayerTouchSuperBomb += Close;
 
-    private void OnDisable() => PlayerBody.onPlayerTouchSuperBomb -= Close;
+    private void OnDisable() => PlayerBody.OnPlayerTouchSuperBomb -= Close;
     #endregion
 
     #region CLASS METHODS

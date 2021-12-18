@@ -18,12 +18,11 @@ public class LocationExit : MonoBehaviour
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnTriggerEnter(Collider other)
     {
-        if (other.WasWithPlayerBody() && !hasLevelFinished)
-        {
-            var playerController = other.gameObject.GetComponent<PlayerController>();
+        if (!other.WasWithPlayerBody() || hasLevelFinished) return;
+        
+        var playerController = other.gameObject.GetComponent<PlayerController>();
 
-            StartCoroutine(FinishLevel(playerController));
-        }
+        StartCoroutine(FinishLevel(playerController));
     }
     #endregion
 
