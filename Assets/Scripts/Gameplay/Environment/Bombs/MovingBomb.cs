@@ -10,7 +10,7 @@ public class MovingBomb : Bomb
     [SerializeField] private Transform[] waypoints;
     #endregion
 
-    private int currentWaypointIndex = 0;
+    private int currentWaypointIndex;
     private Vector3 targetWaypoint;
     #endregion
 
