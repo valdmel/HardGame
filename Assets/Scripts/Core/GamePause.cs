@@ -8,7 +8,6 @@ public class GamePause : MonoBehaviour
     #region SERIALIZABLE
     [Header("Pause Properties")]
     [SerializeField] private GameObject pauseCanvas;
-    [SerializeField] private AudioClip pauseSFX;
     #endregion
 
     private AudioSource audioSource;
@@ -33,7 +32,7 @@ public class GamePause : MonoBehaviour
 
     private void ActivatePauseMenu()
     {
-        audioSource.PlayOneShot(pauseSFX);
+        audioSource.Play();
         pauseCanvas.SetActive(GameManager.Instance.IsGamePaused);
     }
     #endregion

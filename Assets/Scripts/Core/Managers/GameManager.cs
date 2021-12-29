@@ -56,7 +56,7 @@ public class GameManager : Singleton<GameManager>
         OnDeathCounterChange?.Invoke(deathCounter.ToString());
     }
 
-    public void InitTime()
+    private void InitTime()
     {
         timeInSeconds = StartingTime;
         timeCoroutine = StartCoroutine(StartTime());
@@ -64,12 +64,11 @@ public class GameManager : Singleton<GameManager>
 
     public void StopTime()
     {
-        if (IsNormalGameModeActive())
-        {
-            StopCoroutine(timeCoroutine);
+        if (!IsNormalGameModeActive()) return;
+        
+        StopCoroutine(timeCoroutine);
 
-            timeCoroutine = null;
-        }
+        timeCoroutine = null;
     }
 
     public void ActivateNormalGameMode() => activeGameMode = (int)GameMode.Normal;
