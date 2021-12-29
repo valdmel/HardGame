@@ -379,7 +379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &201357684
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1493,6 +1493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7477143316156101245, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 201357684}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76736675929a230498ae731ef4467292, type: 3}
 --- !u!1001 &5792471483114430239
