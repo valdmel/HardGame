@@ -105,7 +105,7 @@ public partial class @GameInputs : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""60208d4a-e737-4d41-9eb1-288416bf6912"",
-                    ""path"": ""<Keyboard>/enter"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse;Keyboard And Mouse"",
@@ -235,45 +235,6 @@ public partial class @GameInputs : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
-        },
-        {
-            ""name"": ""Pause"",
-            ""id"": ""53ee4f18-2890-4afd-8ed7-1f6bd489f93b"",
-            ""actions"": [
-                {
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""e1216707-1ef4-41d9-abc8-654f9018b986"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""ab889120-e76d-4572-8b6c-c15804572f5a"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse;Keyboard And Mouse"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""36bcf281-d6a8-499c-b886-640872bc21dd"",
-                    ""path"": ""<Gamepad>/start"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": [
@@ -305,9 +266,6 @@ public partial class @GameInputs : IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
-        // Pause
-        m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
-        m_Pause_Pause = m_Pause.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -404,39 +362,6 @@ public partial class @GameInputs : IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
-
-    // Pause
-    private readonly InputActionMap m_Pause;
-    private IPauseActions m_PauseActionsCallbackInterface;
-    private readonly InputAction m_Pause_Pause;
-    public struct PauseActions
-    {
-        private @GameInputs m_Wrapper;
-        public PauseActions(@GameInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Pause => m_Wrapper.m_Pause_Pause;
-        public InputActionMap Get() { return m_Wrapper.m_Pause; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PauseActions set) { return set.Get(); }
-        public void SetCallbacks(IPauseActions instance)
-        {
-            if (m_Wrapper.m_PauseActionsCallbackInterface != null)
-            {
-                @Pause.started -= m_Wrapper.m_PauseActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_PauseActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_PauseActionsCallbackInterface.OnPause;
-            }
-            m_Wrapper.m_PauseActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
-            }
-        }
-    }
-    public PauseActions @Pause => new PauseActions(this);
     private int m_KeyboardAndMouseSchemeIndex = -1;
     public InputControlScheme KeyboardAndMouseScheme
     {
@@ -458,10 +383,6 @@ public partial class @GameInputs : IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
-    }
-    public interface IPauseActions
-    {
         void OnPause(InputAction.CallbackContext context);
     }
 }

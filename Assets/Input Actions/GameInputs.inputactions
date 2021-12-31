@@ -83,7 +83,7 @@
                 {
                     "name": "",
                     "id": "60208d4a-e737-4d41-9eb1-288416bf6912",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard and Mouse;Keyboard And Mouse",
@@ -211,45 +211,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Pause",
-            "id": "53ee4f18-2890-4afd-8ed7-1f6bd489f93b",
-            "actions": [
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "e1216707-1ef4-41d9-abc8-654f9018b986",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "ab889120-e76d-4572-8b6c-c15804572f5a",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard and Mouse;Keyboard And Mouse",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "36bcf281-d6a8-499c-b886-640872bc21dd",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }

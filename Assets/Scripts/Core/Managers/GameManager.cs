@@ -26,8 +26,6 @@ public class GameManager : Singleton<GameManager>
     private int deathCounter;
     private int timeInSeconds;
     private Coroutine timeCoroutine;
-
-    public bool IsGamePaused { get; set; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS

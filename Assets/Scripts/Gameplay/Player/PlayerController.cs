@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,7 +25,20 @@ public class PlayerController : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
     }
 
+    private void OnEnable()
+    {
+        GamePause.OnGameResume += EnableMovement;
+        GamePause.OnGamePause += DisableMovement;
+    }
+
     private void FixedUpdate() => AddVelocity();
+
+    private void OnDisable()
+    {
+        GamePause.OnGameResume -= EnableMovement;
+        GamePause.OnGamePause -= DisableMovement;
+    }
+
     #endregion
 
     #region CLASS METHODS
@@ -39,14 +53,12 @@ public class PlayerController : MonoBehaviour
         var canPauseGame = inputContext.performed;
 
         if (!canPauseGame) return;
-        
+
         GameManager.Instance.PauseGame();
-
-        var activeActionMap = GameManager.Instance.IsGamePaused ? PauseActionMap : PlayerActionMap;
-
-        playerInput.SwitchCurrentActionMap(activeActionMap);
     }
 
+    private void EnableMovement() => playerInput.enabled = true;
+    
     public void DisableMovement() => playerInput.enabled = false;
 
     private void AddVelocity() => characterController.SimpleMove(movementDirection);

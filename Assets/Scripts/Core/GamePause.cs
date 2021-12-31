@@ -1,15 +1,20 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GamePause : MonoBehaviour
 {
     #region VARIABLES
-    private const float GameDefaultTimescale = 1f;
-
+    public static Action OnGamePause;
+    public static Action OnGameResume;
+    
     #region SERIALIZABLE
     [Header("Pause Properties")]
     [SerializeField] private GameObject pauseCanvas;
+    [SerializeField] private GameObject resumeButton;
     #endregion
 
+    private bool isGamePaused;
     private AudioSource audioSource;
     #endregion
 
@@ -22,18 +27,30 @@ public class GamePause : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    private void PauseGame()
+    public void ResumeGame()
     {
-        Time.timeScale = GameDefaultTimescale - Time.timeScale;
-        GameManager.Instance.IsGamePaused = !GameManager.Instance.IsGamePaused;
+        Time.timeScale = 1f;
+        isGamePaused = false;
 
         ActivatePauseMenu();
+        OnGameResume?.Invoke();
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+    
+    private void PauseGame()
+    {
+        Time.timeScale = 0f;
+        isGamePaused = true;
+
+        ActivatePauseMenu();
+        OnGamePause?.Invoke();
+        EventSystem.current.SetSelectedGameObject(resumeButton);
     }
 
     private void ActivatePauseMenu()
     {
         audioSource.Play();
-        pauseCanvas.SetActive(GameManager.Instance.IsGamePaused);
+        pauseCanvas.SetActive(isGamePaused);
     }
     #endregion
 }
