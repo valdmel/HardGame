@@ -11,21 +11,16 @@ public class GameManager : Singleton<GameManager>
     private const int StartingTime = 0;
     private const float DecreasingTimeInSeconds = 1f;
 
-    private enum GameMode
-    {
-        Normal = 0,
-        Speedrun = 1
-    }
-
     public static Action<string> OnDeathCounterChange;
     public static Action<string> OnTimeChange;
     public static Action OnGamePause;
     public static Action OnTimeMax;
-
-    private int activeGameMode;
+    
     private int deathCounter;
     private int timeInSeconds;
     private Coroutine timeCoroutine;
+    
+    public int activeGameMode { get; set; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -45,38 +40,31 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region CLASS METHODS
-    public void StartLevel()
-    {
-        var canActivateTimer = !IsNormalGameModeActive() && timeCoroutine == null;
-
-        if (canActivateTimer) InitTime();
-
-        OnDeathCounterChange?.Invoke(deathCounter.ToString());
-    }
-
-    private void InitTime()
-    {
-        timeInSeconds = StartingTime;
-        timeCoroutine = StartCoroutine(StartTime());
-    }
-
     public void StopTime()
     {
-        if (!IsNormalGameModeActive()) return;
+        if (IsNormalGameModeActive()) return;
         
         StopCoroutine(timeCoroutine);
-
-        timeCoroutine = null;
     }
-
-    public void ActivateNormalGameMode() => activeGameMode = (int)GameMode.Normal;
-
-    public void ActivateSpeedrunGameMode() => activeGameMode = (int)GameMode.Speedrun;
+    
+    public void StartLevel() => InitTime();
 
     public void PauseGame() => OnGamePause?.Invoke();
 
-    public bool IsNormalGameModeActive() => activeGameMode.Equals((int)GameMode.Normal);
+    public bool IsNormalGameModeActive() => activeGameMode == (int)GameModeIndex.Normal;
+    
+    private void InitTime()
+    {
+        if (IsNormalGameModeActive()) return;
 
+        if (timeCoroutine == null)
+        {
+            timeInSeconds = StartingTime;
+        }
+        
+        timeCoroutine = StartCoroutine(StartTime());
+    }
+    
     private IEnumerator StartTime()
     {
         var minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
