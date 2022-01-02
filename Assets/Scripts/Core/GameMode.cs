@@ -13,8 +13,8 @@ public class GameMode : MonoBehaviour
     #endregion
     
     #region CLASS METHODS
-    public void StartNormalGame() => GameManager.Instance.activeGameMode = (int)GameModeIndex.Normal;
+    public void StartNormalGame() => GameManager.Instance.ActiveGameMode = (int)GameModeIndex.Normal;
 
-    public void StartSpeedrunGame() => GameManager.Instance.activeGameMode = (int)GameModeIndex.Speedrun;
+    public void StartSpeedrunGame() => GameManager.Instance.ActiveGameMode = (int)GameModeIndex.Speedrun;
     #endregion
 }

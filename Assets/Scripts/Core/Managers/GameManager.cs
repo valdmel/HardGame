@@ -20,7 +20,7 @@ public class GameManager : Singleton<GameManager>
     private int timeInSeconds;
     private Coroutine timeCoroutine;
     
-    public int activeGameMode { get; set; }
+    public int ActiveGameMode { get; set; }
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -51,7 +51,7 @@ public class GameManager : Singleton<GameManager>
 
     public void PauseGame() => OnGamePause?.Invoke();
 
-    public bool IsNormalGameModeActive() => activeGameMode == (int)GameModeIndex.Normal;
+    public bool IsNormalGameModeActive() => ActiveGameMode == (int)GameModeIndex.Normal;
     
     private void InitTime()
     {
