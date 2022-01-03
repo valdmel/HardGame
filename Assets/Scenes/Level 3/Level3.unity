@@ -702,6 +702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalSlideTransitionEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 8980135738321952918, guid: 7a6818310ed99bb45bd6f6c020b63858, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8980135738321952919, guid: 7a6818310ed99bb45bd6f6c020b63858, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -959,10 +963,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1811153844}
     m_Modifications:
-    - target: {fileID: 245726134545129941, guid: e05d5096a33604b41bfc07fc68629b05, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -50.104248
-      objectReference: {fileID: 0}
     - target: {fileID: 2069906498914987530, guid: e05d5096a33604b41bfc07fc68629b05, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1010,10 +1010,6 @@ PrefabInstance:
     - target: {fileID: 6408063296755396564, guid: e05d5096a33604b41bfc07fc68629b05, type: 3}
       propertyPath: m_Name
       value: HUDUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6408063296755396564, guid: e05d5096a33604b41bfc07fc68629b05, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e05d5096a33604b41bfc07fc68629b05, type: 3}
