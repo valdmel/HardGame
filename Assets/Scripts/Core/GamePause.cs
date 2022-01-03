@@ -13,9 +13,10 @@ public class GamePause : MonoBehaviour
     [SerializeField] private GameObject pauseCanvas;
     [SerializeField] private GameObject resumeButton;
     #endregion
-
-    private bool isGamePaused;
+    
     private AudioSource audioSource;
+
+    private bool IsGamePaused => Time.timeScale < 1f;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -30,7 +31,6 @@ public class GamePause : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1f;
-        isGamePaused = false;
 
         ActivatePauseMenu();
         OnGameResume?.Invoke();
@@ -40,7 +40,6 @@ public class GamePause : MonoBehaviour
     private void PauseGame()
     {
         Time.timeScale = 0f;
-        isGamePaused = true;
 
         ActivatePauseMenu();
         OnGamePause?.Invoke();
@@ -50,7 +49,7 @@ public class GamePause : MonoBehaviour
     private void ActivatePauseMenu()
     {
         audioSource.Play();
-        pauseCanvas.SetActive(isGamePaused);
+        pauseCanvas.SetActive(IsGamePaused);
     }
     #endregion
 }
