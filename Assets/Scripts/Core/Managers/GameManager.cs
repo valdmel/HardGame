@@ -87,7 +87,11 @@ public class GameManager : Singleton<GameManager>
 
     private void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        OnTimeChange?.Invoke(TimeInSecondsToString(timeInSeconds));
+        if (!IsNormalGameModeActive())
+        {
+            OnTimeChange?.Invoke(TimeInSecondsToString(timeInSeconds));
+        }
+
         OnDeathCounterChange?.Invoke(deathCounter.ToString());
     }
     #endregion
