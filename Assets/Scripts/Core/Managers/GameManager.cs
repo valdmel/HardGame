@@ -85,6 +85,10 @@ public class GameManager : Singleton<GameManager>
 
     private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TimespanPattern);
 
-    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => OnDeathCounterChange?.Invoke(deathCounter.ToString());
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode)
+    {
+        OnTimeChange?.Invoke(TimeInSecondsToString(timeInSeconds));
+        OnDeathCounterChange?.Invoke(deathCounter.ToString());
+    }
     #endregion
 }
