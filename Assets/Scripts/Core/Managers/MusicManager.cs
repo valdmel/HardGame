@@ -31,18 +31,16 @@ public class MusicManager : Singleton<MusicManager>
     #region CLASS METHODS
     private void MuteAudio()
     {
-        if (audioSource.isPlaying)
-        {
-            audioSource.Pause();
-        }
+        if (!audioSource.isPlaying) return;
+        
+        audioSource.Pause();
     }
     
     private void ResumeAudio()
     {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.Play();
-        }
+        if (audioSource.isPlaying) return;
+        
+        audioSource.Play();
     }
     #endregion
 }

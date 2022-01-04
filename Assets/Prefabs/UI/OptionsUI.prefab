@@ -374,7 +374,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1307967374}
-  - component: {fileID: 1307967375}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -403,18 +402,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0087890625, y: 0.0004272461}
   m_SizeDelta: {x: 1102.2, y: 731.85}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1307967375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307967373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23a0c2479d93eb54190df82a57f4ab8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1449335019
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +596,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 500
   m_TargetDisplay: 0
 --- !u!114 &1628550962
 MonoBehaviour:
@@ -952,9 +939,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8757553232457417386}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 0.1
+  m_MaxValue: 0.05
   m_WholeNumbers: 0
-  m_Value: 0.1
+  m_Value: 0.05
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
