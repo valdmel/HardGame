@@ -20,6 +20,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadPreviousScene() => StartCoroutine(LoadScene(PreviousSceneIndex));
 
+    public void LoadSceneFromIndex(int sceneIndexToLoad) => StartCoroutine(LoadScene(sceneIndexToLoad));
+    
     public void RestartScene() => StartCoroutine(LoadScene(CurrentSceneIndex));
 
     private IEnumerator LoadScene(int sceneIndexToLoad)

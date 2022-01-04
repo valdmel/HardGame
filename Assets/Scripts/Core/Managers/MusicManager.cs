@@ -13,34 +13,5 @@ public class MusicManager : Singleton<MusicManager>
 
         audioSource = GetComponent<AudioSource>();
     }
-
-    private void OnEnable()
-    {
-        GamePause.OnGamePause += MuteAudio;
-        GamePause.OnGameResume += ResumeAudio;
-    }
-
-    private void OnDisable()
-    {
-        GamePause.OnGamePause -= MuteAudio;
-        GamePause.OnGameResume -= ResumeAudio;
-    }
-
-    #endregion
-
-    #region CLASS METHODS
-    private void MuteAudio()
-    {
-        if (!audioSource.isPlaying) return;
-        
-        audioSource.Pause();
-    }
-    
-    private void ResumeAudio()
-    {
-        if (audioSource.isPlaying) return;
-        
-        audioSource.Play();
-    }
     #endregion
 }

@@ -30,17 +30,17 @@ public class GamePause : MonoBehaviour
     #region CLASS METHODS
     public void ResumeGame()
     {
-        Time.timeScale = 1f;
-
+        SetTimeScale(1f);
         ActivatePauseMenu();
         OnGameResume?.Invoke();
         EventSystem.current.SetSelectedGameObject(null);
     }
     
+    public void SetTimeScale(float timeScale) => Time.timeScale = timeScale;
+    
     private void PauseGame()
     {
-        Time.timeScale = 0f;
-
+        SetTimeScale(0f);
         ActivatePauseMenu();
         OnGamePause?.Invoke();
         EventSystem.current.SetSelectedGameObject(resumeButton);
