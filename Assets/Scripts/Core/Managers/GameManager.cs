@@ -43,7 +43,14 @@ public class GameManager : Singleton<GameManager>
 
     private void UpdateDeathCounter() => OnDeathCounterChange?.Invoke((++deathCounter).ToString());
 
-    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => OnDeathCounterChange?.Invoke(deathCounter.ToString());
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode)
+    {
+        var isFirstScene = scene.buildIndex == 0;
+        
+        if (isFirstScene) return;
+
+        OnDeathCounterChange?.Invoke(deathCounter.ToString());
+    }
 
     private void OnApplicationQuit() => PlayerPrefs.DeleteAll();
     #endregion

@@ -12,8 +12,7 @@ public class TimeManager : Singleton<TimeManager>
     private const float DecreasingTimeInSeconds = 1f;
     
     public static Action<string> OnTimeChange;
-    public static Action OnTimeMax;
-    
+
     private int timeInSeconds;
     private Coroutine timeCoroutine;
     #endregion
@@ -25,8 +24,6 @@ public class TimeManager : Singleton<TimeManager>
     #endregion
     
     #region CLASS METHODS
-    public void StopTime() => StopCoroutine(timeCoroutine);
-
     public void InitTime()
     {
         if (timeCoroutine == null)
@@ -37,6 +34,8 @@ public class TimeManager : Singleton<TimeManager>
         timeCoroutine = StartCoroutine(StartTime());
     }
     
+    public void StopTime() => StopCoroutine(timeCoroutine);
+
     private IEnumerator StartTime()
     {
         var minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
@@ -49,11 +48,16 @@ public class TimeManager : Singleton<TimeManager>
 
             yield return new WaitForSeconds(DecreasingTimeInSeconds);
         }
-
-        OnTimeMax?.Invoke();
     }
     
-    private void OnSceneLoad(Scene scene, LoadSceneMode mode) => OnTimeChange?.Invoke(TimeInSecondsToString(timeInSeconds));
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode)
+    {
+        var isFirstScene = scene.buildIndex == 0;
+        
+        if (isFirstScene) return;
+        
+        OnTimeChange?.Invoke(TimeInSecondsToString(timeInSeconds));
+    }
 
     private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TimespanPattern);
     #endregion

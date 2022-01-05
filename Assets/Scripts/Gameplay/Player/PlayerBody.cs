@@ -15,10 +15,6 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => TimeManager.OnTimeMax += Kill;
-
-    private void OnDisable() => TimeManager.OnTimeMax -= Kill;
-
     private void OnTriggerEnter(Collider other)
     {
         var bomb = other.GetComponent<BombBehaviour>();
