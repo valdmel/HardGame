@@ -16,7 +16,7 @@ public class HUD : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnDeathCounterChange += DisplayDeathCounter;
-        GameManager.OnTimeChange += DisplayTime;
+        TimeManager.OnTimeChange += DisplayTime;
     }
 
     private void Start() => ActivateTimer();
@@ -24,7 +24,7 @@ public class HUD : MonoBehaviour
     private void OnDisable()
     {
         GameManager.OnDeathCounterChange -= DisplayDeathCounter;
-        GameManager.OnTimeChange -= DisplayTime;
+        TimeManager.OnTimeChange -= DisplayTime;
     }
     #endregion
 
@@ -35,7 +35,7 @@ public class HUD : MonoBehaviour
 
     private void ActivateTimer()
     {
-        var activateTimer = GameManager.Instance.IsNormalGameModeActive() ? false : true;
+        var activateTimer = !GameManager.Instance.IsNormalGameModeActive();
 
         timer.SetActive(activateTimer);
     }

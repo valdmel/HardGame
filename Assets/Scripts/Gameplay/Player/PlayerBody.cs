@@ -10,14 +10,14 @@ public class PlayerBody : MonoBehaviour
     #region SERIALIZABLE
     [Header("Audio Properties")]
     [SerializeField] private GameObject detacheableAudioSource;
-    [SerializeField] private AudioClip deathSFX;
+    [SerializeField] private AudioClip deathSfx;
     #endregion
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => GameManager.OnTimeMax += Kill;
+    private void OnEnable() => TimeManager.OnTimeMax += Kill;
 
-    private void OnDisable() => GameManager.OnTimeMax -= Kill;
+    private void OnDisable() => TimeManager.OnTimeMax -= Kill;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,7 +35,7 @@ public class PlayerBody : MonoBehaviour
     {
         var audioSource = Instantiate(detacheableAudioSource);
 
-        audioSource.GetComponent<DetachableAudioSource>().PlayOneShot(deathSFX);
+        audioSource.GetComponent<DetachableAudioSource>().PlayOneShot(deathSfx);
         transform.parent.gameObject.SetActive(false);
     }
     #endregion

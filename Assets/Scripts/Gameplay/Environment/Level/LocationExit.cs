@@ -34,7 +34,12 @@ public class LocationExit : MonoBehaviour
         yield return new WaitForSeconds(WaitTime);
 
         playerController.DisableMovement();
-        GameManager.Instance.StopTime();
+
+        if (!GameManager.Instance.IsNormalGameModeActive())
+        {
+            TimeManager.Instance.StopTime();
+        }
+        
         onLevelFinish?.Invoke();
     }
     #endregion
