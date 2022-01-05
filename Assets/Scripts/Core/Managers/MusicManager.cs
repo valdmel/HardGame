@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MusicManager : Singleton<MusicManager>
@@ -13,5 +14,13 @@ public class MusicManager : Singleton<MusicManager>
 
         audioSource = GetComponent<AudioSource>();
     }
+
+    private void OnEnable() => VolumeSlider.OnVolumeChange += SetVolume;
+
+    private void OnDisable() => VolumeSlider.OnVolumeChange -= SetVolume;
+    #endregion
+    
+    #region CLASS METHODS
+    private void SetVolume(float volume) => audioSource.volume = volume;
     #endregion
 }

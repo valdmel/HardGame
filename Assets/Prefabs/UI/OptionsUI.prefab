@@ -944,19 +944,7 @@ MonoBehaviour:
   m_Value: 0.05
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5996642952343624695, guid: 484aab461b3ec50478d1dea71708e1d7, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: set_volume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &4630759635259490412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff7de529285d394b9d08570881de64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicVolumeSlider: {fileID: 7477143316156101245}
 --- !u!1 &5399156697596363931
 GameObject:
   m_ObjectHideFlags: 0

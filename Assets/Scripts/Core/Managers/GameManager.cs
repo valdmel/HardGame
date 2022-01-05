@@ -94,5 +94,7 @@ public class GameManager : Singleton<GameManager>
 
         OnDeathCounterChange?.Invoke(deathCounter.ToString());
     }
+
+    private void OnApplicationQuit() => PlayerPrefs.DeleteAll();
     #endregion
 }
