@@ -29,15 +29,15 @@ public class HUD : MonoBehaviour
     #endregion
 
     #region CLASS METHODS
-    public void DisplayDeathCounter(string deathCounter) => deathCounterText.text = deathCounter;
-
-    public void DisplayTime(string time) => timerText.text = time;
-
     private void ActivateTimer()
     {
         var activateTimer = !GameManager.Instance.IsNormalGameModeActive();
 
         timer.SetActive(activateTimer);
     }
+    
+    private void DisplayDeathCounter(string deathCounter) => deathCounterText.text = deathCounter;
+
+    private void DisplayTime(string time) => timerText.text = time;
     #endregion
 }
