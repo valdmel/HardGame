@@ -23,8 +23,10 @@ public class CameraController : MonoBehaviour
     private void AttachTo(GameObject playerObject)
     {
         var playerBodyObject = playerObject.GetComponentInChildren<PlayerBody>();
-        cinemachineCamera.Follow = playerBodyObject.transform;
-        cinemachineCamera.LookAt = playerBodyObject.transform;
+        var playerBodyObjectTransform = playerBodyObject.transform;
+        
+        cinemachineCamera.Follow = playerBodyObjectTransform;
+        cinemachineCamera.LookAt = playerBodyObjectTransform;
     }
     #endregion
 }
