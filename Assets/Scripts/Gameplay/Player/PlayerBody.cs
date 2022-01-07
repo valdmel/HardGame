@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerBody : MonoBehaviour
 {
     #region VARIABLES
+    public static Action<GameObject> OnPlayerSpawn;
+    public static Action OnPlayerDeath;
     public static Action OnPlayerTouchBomb;
     public static Action OnPlayerTouchSuperBomb;
 
@@ -15,6 +17,8 @@ public class PlayerBody : MonoBehaviour
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
+    private void Start() => OnPlayerSpawn?.Invoke(transform.parent.gameObject);
+
     private void OnTriggerEnter(Collider other)
     {
         var bomb = other.GetComponent<BombBehaviour>();
@@ -32,7 +36,9 @@ public class PlayerBody : MonoBehaviour
         var audioSource = Instantiate(detacheableAudioSource);
 
         audioSource.GetComponent<DetachableAudioSource>().PlayOneShot(deathSfx);
-        transform.parent.gameObject.SetActive(false);
+        Destroy(transform.parent.gameObject);
     }
+
+    private void OnDestroy() => OnPlayerDeath?.Invoke();
     #endregion
 }
