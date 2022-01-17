@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     private int deathCounter;
 
     public int ActiveGameMode { get; set; }
+    public bool IsNormalGameModeActive => ActiveGameMode == (int)GameModeIndex.Normal;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -32,14 +33,12 @@ public class GameManager : Singleton<GameManager>
     #region CLASS METHODS
     public void StartLevel()
     {
-        if (IsNormalGameModeActive()) return;
+        if (IsNormalGameModeActive) return;
         
         TimeManager.Instance.InitTime();
     }
 
     public void PauseGame() => OnGamePause?.Invoke();
-
-    public bool IsNormalGameModeActive() => ActiveGameMode == (int)GameModeIndex.Normal;
 
     private void UpdateDeathCounter() => OnDeathCounterChange?.Invoke((++deathCounter).ToString());
 

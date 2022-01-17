@@ -35,7 +35,7 @@ public class LocationExit : MonoBehaviour
 
         playerController.DisableMovement();
 
-        if (!GameManager.Instance.IsNormalGameModeActive())
+        if (!GameManager.Instance.IsNormalGameModeActive)
         {
             TimeManager.Instance.StopTime();
         }

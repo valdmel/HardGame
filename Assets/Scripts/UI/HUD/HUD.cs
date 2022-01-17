@@ -37,7 +37,7 @@ public class HUD : MonoBehaviour
     #region CLASS METHODS
     private void ActivateTimer()
     {
-        var activateTimer = !GameManager.Instance.IsNormalGameModeActive();
+        var activateTimer = !GameManager.Instance.IsNormalGameModeActive;
 
         timer.SetActive(activateTimer);
     }
