@@ -1,5 +1,3 @@
-using Cinemachine;
-using System;
 using System.Collections;
 using UnityEngine;
 

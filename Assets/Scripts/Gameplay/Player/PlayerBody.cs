@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerBody : MonoBehaviour
+public class PlayerBody : MonoBehaviour, IKillable
 {
     #region VARIABLES
     public static Action<GameObject> OnPlayerSpawn;

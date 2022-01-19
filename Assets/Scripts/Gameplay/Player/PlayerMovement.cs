@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour, ICanMove
+public class PlayerMovement : MonoBehaviour, IMovable
 {
     #region VARIABLES
     #region SERIALIZABLE

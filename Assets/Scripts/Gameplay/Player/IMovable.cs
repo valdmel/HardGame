@@ -1,4 +1,4 @@
-﻿public interface ICanMove
+﻿public interface IMovable
 {
     public void Move();
 
