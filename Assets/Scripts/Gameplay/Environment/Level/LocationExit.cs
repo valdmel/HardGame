@@ -20,20 +20,20 @@ public class LocationExit : MonoBehaviour
     {
         if (!other.WasWithPlayerBody() || hasLevelFinished) return;
         
-        var playerController = other.gameObject.GetComponent<PlayerController>();
+        var playerMovement = other.gameObject.GetComponent<ICanMove>();
 
-        StartCoroutine(FinishLevel(playerController));
+        StartCoroutine(FinishLevel(playerMovement));
     }
     #endregion
 
     #region CLASS METHODS
-    private IEnumerator FinishLevel(PlayerController playerController)
+    private IEnumerator FinishLevel(ICanMove playerMovement)
     {
         hasLevelFinished = true;
 
         yield return new WaitForSeconds(WaitTime);
 
-        playerController.DisableMovement();
+        playerMovement.DisableMovement();
 
         if (!GameManager.Instance.IsNormalGameModeActive)
         {
