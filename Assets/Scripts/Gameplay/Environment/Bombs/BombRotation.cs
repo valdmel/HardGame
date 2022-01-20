@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RotatingBomb : Bomb
+public class BombRotation : Bomb
 {
     #region VARIABLES
     #region SERIALIZABLE

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MovingBomb : Bomb
+public class BombMovement : Bomb
 {
     #region VARIABLES
     private const float MinDistance = 0.1f;
