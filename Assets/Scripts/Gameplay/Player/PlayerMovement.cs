@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour, IMovable
@@ -6,12 +7,14 @@ public class PlayerMovement : MonoBehaviour, IMovable
     #region VARIABLES
     #region SERIALIZABLE
     [Header("Movement Properties")]
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private PlayerSpeed playerSpeed;
     #endregion
-
+    
     private CharacterController characterController;
     private PlayerInput playerInput;
     private Vector3 movementDirection;
+    
+    private int moveSpeed => playerSpeed.MoveSpeed;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
