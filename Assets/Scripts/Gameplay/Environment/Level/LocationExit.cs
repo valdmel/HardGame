@@ -29,16 +29,16 @@ public class LocationExit : MonoBehaviour
     {
         var playerMovement = other.gameObject.GetComponent<IMovement>();
 
-        DisablePlayerMovement(playerMovement);
-        StartCoroutine(FinishLevel());
+        StartCoroutine(FinishLevel(playerMovement));
     }
     
-    private IEnumerator FinishLevel()
+    private IEnumerator FinishLevel(IMovement playerMovement)
     {
         hasLevelFinished = true;
 
         yield return new WaitForSeconds(WaitTime);
         
+        DisablePlayerMovement(playerMovement);
         StopTime();
         onLevelFinish?.Invoke();
     }
