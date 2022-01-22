@@ -145,7 +145,7 @@ PrefabInstance:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1242296626}
+      objectReference: {fileID: 1309598838}
     - target: {fileID: 3166460096328954667, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -6156,11 +6156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015724877
+      value: -0.000000015724877
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000011081624
+      value: 0.000000011081624
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
