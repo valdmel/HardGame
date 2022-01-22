@@ -19,28 +19,37 @@ public class LocationExit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.WasWithPlayerBody() || hasLevelFinished) return;
-        
-        var playerMovement = other.gameObject.GetComponent<IMovable>();
 
-        StartCoroutine(FinishLevel(playerMovement));
+        FinishLevel(other);
     }
     #endregion
 
     #region CLASS METHODS
-    private IEnumerator FinishLevel(IMovable playerMovement)
+    private void FinishLevel(Collider other)
+    {
+        var playerMovement = other.gameObject.GetComponent<IMovement>();
+
+        DisablePlayerMovement(playerMovement);
+        StartCoroutine(FinishLevel());
+    }
+    
+    private IEnumerator FinishLevel()
     {
         hasLevelFinished = true;
 
         yield return new WaitForSeconds(WaitTime);
-
-        playerMovement.DisableMovement();
-
-        if (!GameManager.Instance.IsNormalGameModeActive)
-        {
-            TimeManager.Instance.StopTime();
-        }
         
+        StopTime();
         onLevelFinish?.Invoke();
+    }
+
+    private void DisablePlayerMovement(IMovement playerMovement) => playerMovement.DisableMovement();
+
+    private void StopTime()
+    {
+        if (GameManager.Instance.IsNormalGameModeActive) return;
+        
+        TimeManager.Instance.StopTime();
     }
     #endregion
 }

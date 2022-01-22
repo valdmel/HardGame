@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     {
         var inputMovement = inputContext.ReadValue<Vector2>();
 
-        playerMovement.CalculateMovement(inputMovement);
+        playerMovement.CalculateMovementDirection(inputMovement);
     }
 
     public void OnPause(InputAction.CallbackContext inputContext)

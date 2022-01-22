@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour, IMovable
+public class PlayerMovement : MonoBehaviour, IMovable, IMovement
 {
     #region VARIABLES
     #region SERIALIZABLE
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour, IMovable
     
     public void DisableMovement() => playerInput.enabled = false;
     
-    public void CalculateMovement(Vector3 inputMovement) => movementDirection = new Vector3(inputMovement.x, 
+    public void CalculateMovementDirection(Vector3 inputMovement) => movementDirection = new Vector3(inputMovement.x, 
         Vector3.zero.y, inputMovement.y);
     #endregion
 }

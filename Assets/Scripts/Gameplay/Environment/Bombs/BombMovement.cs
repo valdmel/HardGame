@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BombMovement : Bomb
+public class BombMovement : Bomb, IMovable
 {
     #region VARIABLES
     private const float MinDistance = 0.1f;
@@ -35,7 +35,7 @@ public class BombMovement : Bomb
         targetWaypoint = waypoints[currentWaypointIndex].transform.position;
     }
 
-    private void Move()
+    public void Move()
     {
         var distanceFromWaypointToCurrentPosition = Vector3.Distance(targetWaypoint, transform.position);
         var hasReachedWaypoint = distanceFromWaypointToCurrentPosition < MinDistance;
