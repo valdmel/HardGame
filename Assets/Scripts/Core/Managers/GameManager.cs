@@ -18,15 +18,13 @@ public class GameManager : Singleton<GameManager>
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoad;
-        PlayerBody.OnPlayerTouchBomb += UpdateDeathCounter;
-        PlayerBody.OnPlayerTouchSuperBomb += UpdateDeathCounter;
+        PlayerBody.OnPlayerDeath += UpdateDeathCounter;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoad;
-        PlayerBody.OnPlayerTouchBomb -= UpdateDeathCounter;
-        PlayerBody.OnPlayerTouchSuperBomb -= UpdateDeathCounter;
+        PlayerBody.OnPlayerDeath -= UpdateDeathCounter;
     }
     #endregion
 

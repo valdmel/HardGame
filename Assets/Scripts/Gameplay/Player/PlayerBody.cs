@@ -6,7 +6,6 @@ public class PlayerBody : MonoBehaviour, IKillable
     #region VARIABLES
     public static Action<GameObject> OnPlayerSpawn;
     public static Action OnPlayerDeath;
-    public static Action OnPlayerTouchBomb;
     public static Action OnPlayerTouchSuperBomb;
 
     #region SERIALIZABLE
