@@ -17,7 +17,7 @@ public class BombMovement : Bomb, IMovable
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Start() => Init();
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (waypoints.Length == 0) return;
 
@@ -45,7 +45,7 @@ public class BombMovement : Bomb, IMovable
             SetNextWaypoint();
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, moveSpeed * Time.fixedDeltaTime);
     }
 
     private void SetNextWaypoint()

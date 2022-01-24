@@ -10,10 +10,10 @@ public class BombRotation : Bomb, IMovable
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Update() => Move();
+    private void FixedUpdate() => Move();
     #endregion
 
     #region CLASS METHODS
-    public void Move() => transform.RotateAround(rotationTarget.transform.position, Vector3.up, moveSpeed * Time.deltaTime);
+    public void Move() => transform.RotateAround(rotationTarget.transform.position, Vector3.up, moveSpeed * Time.fixedDeltaTime);
     #endregion
 }
