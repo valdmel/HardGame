@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BombRotation : Bomb
+public class BombRotation : Bomb, IMovable
 {
     #region VARIABLES
     #region SERIALIZABLE
@@ -10,10 +10,10 @@ public class BombRotation : Bomb
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void Update() => Rotate();
+    private void Update() => Move();
     #endregion
 
     #region CLASS METHODS
-    private void Rotate() => transform.RotateAround(rotationTarget.transform.position, Vector3.up, moveSpeed * Time.deltaTime);
+    public void Move() => transform.RotateAround(rotationTarget.transform.position, Vector3.up, moveSpeed * Time.deltaTime);
     #endregion
 }

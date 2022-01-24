@@ -6,7 +6,7 @@ public class BombMovement : Bomb, IMovable
     private const float MinDistance = 0.1f;
 
     #region SERIALIZABLE
-    [Header("Movement Properties")]
+    [Header("Waypoint Properties")]
     [SerializeField] private Transform[] waypoints;
     #endregion
 
@@ -17,7 +17,7 @@ public class BombMovement : Bomb, IMovable
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Start() => Init();
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (waypoints.Length == 0) return;
 
@@ -45,7 +45,7 @@ public class BombMovement : Bomb, IMovable
             SetNextWaypoint();
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, moveSpeed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, moveSpeed * Time.deltaTime);
     }
 
     private void SetNextWaypoint()
