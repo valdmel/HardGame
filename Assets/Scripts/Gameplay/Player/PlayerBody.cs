@@ -20,11 +20,11 @@ public class PlayerBody : MonoBehaviour, IKillable
 
     private void OnTriggerEnter(Collider other)
     {
-        var bomb = other.GetComponent<BombBehaviour>();
+        var bomb = other.GetComponent<BombBody>();
 
         if (bomb)
         {
-            bomb.ApplyTypeBehaviourTo(gameObject);
+            bomb.ApplyBehaviourTo(gameObject);
         }
     }
     #endregion

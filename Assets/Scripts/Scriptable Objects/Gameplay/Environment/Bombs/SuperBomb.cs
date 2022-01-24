@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Gameplay/Super BombMovement", fileName = "SuperBomb")]
-public class SuperBomb : BombType
+public class SuperBomb : BombBehaviour
 {
     #region CLASS METHODS
     public override void ApplyTo(GameObject objectToBeAffected)

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class BombType : ScriptableObject
+public abstract class BombBehaviour : ScriptableObject
 {
     #region CLASS METHODS
     public virtual void ApplyTo(GameObject affectedObject)
