@@ -1,58 +1,22 @@
 using UnityEngine;
 
-public class BombMovement : Bomb, IMovable
+public abstract class BombMovement : MonoBehaviour
 {
     #region VARIABLES
-    private const float MinDistance = 0.1f;
-
     #region SERIALIZABLE
-    [Header("Waypoint Properties")]
-    [SerializeField] private Transform[] waypoints;
+    [SerializeField, Range(-180, 180)] private int bombSpeed;
     #endregion
 
-    private int currentWaypointIndex;
-    private Vector3 targetWaypoint;
+    protected int moveSpeed;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Start() => Init();
 
-    private void FixedUpdate()
-    {
-        if (waypoints.Length == 0) return;
-
-        Move();
-    }
+    private void OnValidate() => Init();
     #endregion
 
     #region CLASS METHODS
-    protected override void Init()
-    {
-        base.Init();
-
-        if (waypoints.Length == 0) return;
-
-        targetWaypoint = waypoints[currentWaypointIndex].transform.position;
-    }
-
-    public void Move()
-    {
-        var distanceFromWaypointToCurrentPosition = Vector3.Distance(targetWaypoint, transform.position);
-        var hasReachedWaypoint = distanceFromWaypointToCurrentPosition < MinDistance;
-
-        if (hasReachedWaypoint)
-        {
-            SetNextWaypoint();
-        }
-
-        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, moveSpeed * Time.fixedDeltaTime);
-    }
-
-    private void SetNextWaypoint()
-    {
-        var hasReachedLastWaypoint = ++currentWaypointIndex >= waypoints.Length;
-        currentWaypointIndex = hasReachedLastWaypoint ? 0 : currentWaypointIndex;
-        targetWaypoint = waypoints[currentWaypointIndex].transform.position;
-    }
+    protected virtual void Init() => moveSpeed = bombSpeed;
     #endregion
 }

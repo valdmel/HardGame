@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Gameplay/Super Bomb", fileName = "SuperBomb")]
+[CreateAssetMenu(menuName = "Gameplay/Super BombMovement", fileName = "SuperBomb")]
 public class SuperBomb : BombType
 {
     #region CLASS METHODS

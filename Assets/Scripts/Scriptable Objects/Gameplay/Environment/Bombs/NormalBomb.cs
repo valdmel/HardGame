@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Gameplay/Normal Bomb", fileName = "NormalBomb")]
+[CreateAssetMenu(menuName = "Gameplay/Normal BombMovement", fileName = "NormalBomb")]
 public class NormalBomb : BombType
 {
     #region CLASS METHODS
