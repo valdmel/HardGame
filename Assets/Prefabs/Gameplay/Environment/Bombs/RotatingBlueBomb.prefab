@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: bombType
       value: 
       objectReference: {fileID: 11400000, guid: 6177267059b593040bd0ba6ac239f0ec, type: 2}
+    - target: {fileID: 119978729, guid: b446b44c1ed6d884d8ccc07c2d05d171, type: 3}
+      propertyPath: bombBehaviour
+      value: 
+      objectReference: {fileID: 11400000, guid: 6177267059b593040bd0ba6ac239f0ec, type: 2}
     - target: {fileID: 7105203581781684467, guid: b446b44c1ed6d884d8ccc07c2d05d171, type: 3}
       propertyPath: m_Name
       value: RotatingBlueBomb
@@ -82,5 +86,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a118b3e9d3edfd84f916a1975708541b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  moveSpeed: 0
+  bombSpeed: 0
+  rotationTarget: {fileID: 0}
