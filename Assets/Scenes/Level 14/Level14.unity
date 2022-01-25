@@ -3101,6 +3101,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 922571670}
+    - target: {fileID: 2065620347038782239, guid: e13071b44bfdf4442a8ca62cd2f325a7, type: 3}
+      propertyPath: doorBodyObjectToOpen
+      value: 
+      objectReference: {fileID: 1288768554}
     - target: {fileID: 2065620347038782305, guid: e13071b44bfdf4442a8ca62cd2f325a7, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4437,6 +4441,11 @@ PrefabInstance:
 --- !u!4 &1288768553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8847905988639332223, guid: 9589373273c8aa14a93cee3057b7fad2, type: 3}
+  m_PrefabInstance: {fileID: 1288768552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1288768554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8847905988639332222, guid: 9589373273c8aa14a93cee3057b7fad2, type: 3}
   m_PrefabInstance: {fileID: 1288768552}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1291487591
@@ -6971,7 +6980,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49758
+  m_Name: pb_Mesh-35254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7334,11 +7343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001572489
+      value: 0.000000015724877
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000110816325
+      value: -0.000000011081624
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7374,11 +7383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885693, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -3.1086245e-14
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885693, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 9.05942e-14
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885694, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_Follow
