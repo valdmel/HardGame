@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ExitMenu : MonoBehaviour
+public class GameEnd : MonoBehaviour
 {
     #region CLASS METHODS
     public void ExitToMainMenu() => Destroy(GameManager.Instance.gameObject);

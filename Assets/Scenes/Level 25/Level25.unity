@@ -164,11 +164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015724877
+      value: -0.000000015724877
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000011081624
+      value: 0.000000011081624
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2685,8 +2685,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 824341173}
     - target: {fileID: 8228566630657560269, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
-      propertyPath: m_SelectedVertices.Array.size
+      propertyPath: m_SelectedEdges.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228566630657560269, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
+      propertyPath: m_SelectedFaces.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228566630657560269, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7add12f01476050408b5c78ab6a2ec7c, type: 3}
@@ -4332,7 +4340,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-51616
+  m_Name: pb_Mesh-67016
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
