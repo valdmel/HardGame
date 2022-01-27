@@ -15,6 +15,8 @@ public class TimeManager : Singleton<TimeManager>
 
     private int timeInSeconds;
     private Coroutine timeCoroutine;
+
+    public int TimeInSeconds => timeInSeconds;
     #endregion
     
     #region MONOBEHAVIOUR CALLBACK METHODS

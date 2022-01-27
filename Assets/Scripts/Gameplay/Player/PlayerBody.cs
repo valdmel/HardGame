@@ -35,9 +35,8 @@ public class PlayerBody : MonoBehaviour, IKillable
         var audioSource = Instantiate(detacheableAudioSource);
 
         audioSource.GetComponent<DetachableAudioSource>().PlayOneShot(deathSfx);
+        OnPlayerDeath?.Invoke();
         Destroy(transform.parent.gameObject);
     }
-
-    private void OnDestroy() => OnPlayerDeath?.Invoke();
     #endregion
 }

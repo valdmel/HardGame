@@ -8,10 +8,10 @@ public class GameManager : Singleton<GameManager>
     public static Action<string> OnDeathCounterChange;
     public static Action OnGamePause;
 
-    private int deathCounter;
-
     public int ActiveGameMode { get; set; }
     public bool IsNormalGameModeActive => ActiveGameMode == (int)GameModeIndex.Normal;
+    public int DeathCounter { get; private set; }
+
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -38,7 +38,7 @@ public class GameManager : Singleton<GameManager>
 
     public void PauseGame() => OnGamePause?.Invoke();
 
-    private void UpdateDeathCounter() => OnDeathCounterChange?.Invoke((++deathCounter).ToString());
+    private void UpdateDeathCounter() => OnDeathCounterChange?.Invoke((++DeathCounter).ToString());
 
     private void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
@@ -46,7 +46,7 @@ public class GameManager : Singleton<GameManager>
         
         if (isFirstScene) return;
 
-        OnDeathCounterChange?.Invoke(deathCounter.ToString());
+        OnDeathCounterChange?.Invoke(DeathCounter.ToString());
     }
 
     private void OnApplicationQuit() => PlayerPrefs.DeleteAll();
