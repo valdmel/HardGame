@@ -42,9 +42,7 @@ public class GameManager : Singleton<GameManager>
 
     private void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        var isFirstScene = scene.buildIndex == 0;
-        
-        if (isFirstScene) return;
+        if (scene.IsFirst()) return;
 
         OnDeathCounterChange?.Invoke(DeathCounter.ToString());
     }

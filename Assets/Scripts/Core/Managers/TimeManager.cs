@@ -1,66 +1,41 @@
 using System;
-using System.Collections;
-using UnityEngine;
+using System.Diagnostics;
 using UnityEngine.SceneManagement;
 
 public class TimeManager : Singleton<TimeManager>
 {
     #region VARIABLES
-    private const string TimespanPattern = @"mm\:ss";
-    private const int MaxMinutes = 60;
-    private const int StartingTime = 0;
-    private const float DecreasingTimeInSeconds = 1f;
+    public static Action<string> OnElapsedTime;
     
-    public static Action<string> OnTimeChange;
-
-    private int timeInSeconds;
-    private Coroutine timeCoroutine;
-
-    public int TimeInSeconds => timeInSeconds;
+    private readonly Stopwatch stopwatch = new Stopwatch();
+    
+    public string ElapsedTime => $"{TimeTaken.Hours:00}:{TimeTaken.Minutes:00}:{TimeTaken.Seconds:00}";
+    private TimeSpan TimeTaken => stopwatch.Elapsed;
     #endregion
     
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoad;
 
+    private void Update()
+    {
+        if (!stopwatch.IsRunning) return;
+        
+        OnElapsedTime?.Invoke(ElapsedTime);
+    }
+
     private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoad;
     #endregion
     
     #region CLASS METHODS
-    public void InitTime()
-    {
-        if (timeCoroutine == null)
-        {
-            timeInSeconds = StartingTime;
-        }
-        
-        timeCoroutine = StartCoroutine(StartTime());
-    }
-    
-    public void StopTime() => StopCoroutine(timeCoroutine);
+    public void InitTime() => stopwatch?.Start();
 
-    private IEnumerator StartTime()
-    {
-        var minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
+    public void StopTime() => stopwatch?.Stop();
 
-        while (minutesFromSeconds <= MaxMinutes)
-        {
-            OnTimeChange?.Invoke(TimeInSecondsToString(++timeInSeconds));
-
-            minutesFromSeconds = TimeSpan.FromSeconds(timeInSeconds).Minutes;
-
-            yield return new WaitForSeconds(DecreasingTimeInSeconds);
-        }
-    }
-    
     private void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        var isFirstScene = scene.buildIndex == 0;
+        if (scene.IsFirst()) return;
         
-        if (isFirstScene) return;
-        
-        OnTimeChange?.Invoke(TimeInSecondsToString(timeInSeconds));
+        OnElapsedTime?.Invoke(ElapsedTime);
     }
-
-    private string TimeInSecondsToString(int timeInSeconds) => TimeSpan.FromSeconds(timeInSeconds).ToString(TimespanPattern);
     #endregion
 }

@@ -23,7 +23,7 @@ public class HUD : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnDeathCounterChange += DisplayDeathCounter;
-        TimeManager.OnTimeChange += DisplayTime;
+        TimeManager.OnElapsedTime += DisplayTime;
     }
 
     private void Start()
@@ -35,7 +35,7 @@ public class HUD : MonoBehaviour
     private void OnDisable()
     {
         GameManager.OnDeathCounterChange -= DisplayDeathCounter;
-        TimeManager.OnTimeChange -= DisplayTime;
+        TimeManager.OnElapsedTime -= DisplayTime;
     }
     #endregion
 
