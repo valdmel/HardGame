@@ -12,12 +12,14 @@ public class GameEndStats : MonoBehaviour
     [SerializeField] private TMP_Text deathCounterText;
     [SerializeField] private TMP_Text timerText;
     #endregion
+    
+    private bool ActivateTimerText => !GameManager.Instance.IsNormalGameModeActive;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
     private void Start()
     {
-        timerText.gameObject.SetActive(!GameManager.Instance.IsNormalGameModeActive);
+        timerText.gameObject.SetActive(ActivateTimerText);
         ShowGameStats();
     }
 
@@ -28,7 +30,7 @@ public class GameEndStats : MonoBehaviour
     {
         deathCounterText.text = DeathText + GameManager.Instance.DeathCounter;
 
-        if (GameManager.Instance.IsNormalGameModeActive) return;
+        if (!timerText.enabled) return;
 
         timerText.text = TimeText + TimeManager.Instance.ElapsedTime;
     }
