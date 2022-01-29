@@ -11,7 +11,6 @@ public class GameManager : Singleton<GameManager>
     public int ActiveGameMode { get; set; }
     public bool IsNormalGameModeActive => ActiveGameMode == (int)GameModeIndex.Normal;
     public int DeathCounter { get; private set; }
-
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS

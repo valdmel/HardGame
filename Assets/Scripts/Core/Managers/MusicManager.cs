@@ -15,9 +15,9 @@ public class MusicManager : Singleton<MusicManager>
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnEnable() => VolumeSlider.OnVolumeChange += SetVolume;
+    private void OnEnable() => VolumeSlider.OnMusicVolumeChange += SetVolume;
 
-    private void OnDisable() => VolumeSlider.OnVolumeChange -= SetVolume;
+    private void OnDisable() => VolumeSlider.OnMusicVolumeChange -= SetVolume;
     #endregion
     
     #region CLASS METHODS

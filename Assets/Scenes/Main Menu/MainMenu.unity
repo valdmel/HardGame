@@ -1439,6 +1439,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 442919493413569746, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000032432377
+      objectReference: {fileID: 0}
+    - target: {fileID: 442919493413569746, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -38.70108
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120377032274936762, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120377032274936762, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120377032274936762, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1793147962328223746, guid: 76736675929a230498ae731ef4467292, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1487,10 +1507,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1793147962328223747, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337136572107795556, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_Name
+      value: MusicVolumeSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370141743678976591, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370141743678976591, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472267945145221939, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472267945145221939, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7477143316156101245, guid: 76736675929a230498ae731ef4467292, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 201357684}
+    - target: {fileID: 8757553232457417386, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757553232457417386, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757553232457417386, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76736675929a230498ae731ef4467292, type: 3}
 --- !u!1001 &5792471483114430239
@@ -1583,7 +1639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5996642952343624688, guid: 484aab461b3ec50478d1dea71708e1d7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5996642952343624694, guid: 484aab461b3ec50478d1dea71708e1d7, type: 3}
       propertyPath: m_RootOrder
