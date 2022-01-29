@@ -14,7 +14,12 @@ public class TimeManager : Singleton<TimeManager>
     #endregion
     
     #region MONOBEHAVIOUR CALLBACK METHODS
-    private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoad;
+    private void OnEnable()
+    {
+        GamePause.OnGameResume += StartTime;
+        GamePause.OnGamePause += StopTime;
+        SceneManager.sceneLoaded += OnSceneLoad;
+    }
 
     private void Update()
     {
@@ -23,11 +28,17 @@ public class TimeManager : Singleton<TimeManager>
         OnElapsedTime?.Invoke(ElapsedTime);
     }
 
-    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoad;
+    private void OnDisable()
+    {
+        GamePause.OnGameResume -= StartTime;
+        GamePause.OnGamePause -= StopTime;
+        SceneManager.sceneLoaded -= OnSceneLoad;
+    }
+
     #endregion
     
     #region CLASS METHODS
-    public void InitTime() => stopwatch?.Start();
+    public void StartTime() => stopwatch?.Start();
 
     public void StopTime() => stopwatch?.Stop();
 

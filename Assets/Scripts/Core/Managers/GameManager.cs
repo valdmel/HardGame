@@ -33,7 +33,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (IsNormalGameModeActive) return;
         
-        TimeManager.Instance.InitTime();
+        TimeManager.Instance.StartTime();
     }
 
     public void PauseGame() => OnGamePause?.Invoke();
