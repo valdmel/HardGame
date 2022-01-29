@@ -1581,6 +1581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5996642952343624688, guid: 484aab461b3ec50478d1dea71708e1d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5996642952343624694, guid: 484aab461b3ec50478d1dea71708e1d7, type: 3}
       propertyPath: m_RootOrder
       value: 6
