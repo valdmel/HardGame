@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: bombSpeed
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
@@ -2121,7 +2121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: bombSpeed
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
@@ -2731,7 +2731,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: bombSpeed
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
@@ -3307,7 +3307,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: bombSpeed
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
@@ -5692,7 +5692,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: bombSpeed
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8240100694365274556, guid: abd27efeb1a97884e81021948aaac616, type: 3}
       propertyPath: waypoints.Array.size
@@ -6260,11 +6260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000015714496
+      value: 0.000000015724877
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000011074307
+      value: -0.000000011081624
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6300,11 +6300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885693, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 3.3040237e-12
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885693, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -9.253931e-12
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885694, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_Follow

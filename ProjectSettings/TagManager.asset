@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerBody
   - Wall
+  - Bomb
   layers:
   - Default
   - TransparentFX
