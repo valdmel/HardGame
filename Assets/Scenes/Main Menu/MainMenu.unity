@@ -1511,10 +1511,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5337136572107795556, guid: 76736675929a230498ae731ef4467292, type: 3}
-      propertyPath: m_Name
-      value: MusicVolumeSlider
-      objectReference: {fileID: 0}
+    - target: {fileID: 3287020754819197973, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 201357684}
     - target: {fileID: 7370141743678976591, guid: 76736675929a230498ae731ef4467292, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1532,9 +1532,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7477143316156101245, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_MaxValue
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477143316156101245, guid: 76736675929a230498ae731ef4467292, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 201357684}
+    - target: {fileID: 7778872047257733209, guid: 76736675929a230498ae731ef4467292, type: 3}
+      propertyPath: m_MaxValue
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8757553232457417386, guid: 76736675929a230498ae731ef4467292, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1636,10 +1644,6 @@ PrefabInstance:
     - target: {fileID: 5996642952343624688, guid: 484aab461b3ec50478d1dea71708e1d7, type: 3}
       propertyPath: m_Name
       value: MusicManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996642952343624688, guid: 484aab461b3ec50478d1dea71708e1d7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5996642952343624694, guid: 484aab461b3ec50478d1dea71708e1d7, type: 3}
       propertyPath: m_RootOrder

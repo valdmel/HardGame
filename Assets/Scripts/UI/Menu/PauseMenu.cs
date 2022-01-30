@@ -40,7 +40,6 @@ public class PauseMenu : MonoBehaviour
     
     private void Deactivate()
     {
-        audioSource.Play();
         pauseCanvas.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
     }
