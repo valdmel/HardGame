@@ -13,6 +13,8 @@ public class PlayerBody : MonoBehaviour, IKillable
     [SerializeField] private GameObject detacheableAudioSource;
     [SerializeField] private AudioClip deathSfx;
     #endregion
+
+    private bool IsDead => !enabled;
     #endregion
 
     #region MONOBEHAVIOUR CALLBACK METHODS
@@ -20,12 +22,11 @@ public class PlayerBody : MonoBehaviour, IKillable
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.WasWithBomb() || IsDead) return;
+        
         var bomb = other.GetComponent<BombBody>();
-
-        if (bomb)
-        {
-            bomb.ApplyBehaviourTo(gameObject);
-        }
+        
+        bomb.ApplyBehaviourTo(gameObject);
     }
     #endregion
 
