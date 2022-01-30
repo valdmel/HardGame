@@ -1160,6 +1160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameInstructionsUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3814042225449082923, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
     - target: {fileID: 4183650169199422260, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1559,6 +1563,10 @@ PrefabInstance:
     - target: {fileID: 7245391497149066520, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_fontSizeBase
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245391497656875463, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
       objectReference: {fileID: 0}
     - target: {fileID: 7668981136225268440, guid: ba1d9f1004c98ed4fa1ac273201f9928, type: 3}
       propertyPath: m_RootOrder
