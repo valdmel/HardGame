@@ -1116,6 +1116,22 @@ PrefabInstance:
       value: PauseUI
       objectReference: {fileID: 0}
     - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1370334111}
+    - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1370334112}
+    - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1571207210}
+    - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
       objectReference: {fileID: 1370334111}
@@ -1123,6 +1139,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[7].m_Target
       value: 
       objectReference: {fileID: 1370334112}
+    - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: LoadSceneFromIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: SetTimeScale
+      objectReference: {fileID: 0}
     - target: {fileID: 2619112935992905959, guid: 9383231ae593ff5468d2f43fbdbc0bdf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
       value: SetActive
@@ -3196,6 +3224,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2978751275378115012, guid: 65a4e29066dfe8e4ebfda5e6af24bbb1, type: 3}
   m_PrefabInstance: {fileID: 1571207208}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1571207210 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2978751275378115034, guid: 65a4e29066dfe8e4ebfda5e6af24bbb1, type: 3}
+  m_PrefabInstance: {fileID: 1571207208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571207209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e42bba2071a49fe40a7245e12653ab30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1593369862 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3663721893337219076, guid: 122526683e40784489a412bbb6f2b7ec, type: 3}
@@ -5045,11 +5084,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015724877
+      value: 0.000000015428629
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000011081624
+      value: -0.000000010872851
       objectReference: {fileID: 0}
     - target: {fileID: 1303398050285222854, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5085,11 +5124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885693, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1.5251445e-10
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885693, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -4.2703086e-10
       objectReference: {fileID: 0}
     - target: {fileID: 7961597099600885694, guid: e10c9c397c5bca44b81adaffee648873, type: 3}
       propertyPath: m_Follow
