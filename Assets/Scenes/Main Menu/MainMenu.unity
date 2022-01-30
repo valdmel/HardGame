@@ -1153,16 +1153,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 1811153844}
     m_Modifications:
     - target: {fileID: 1529324416, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1153587016}
+      objectReference: {fileID: 1969646762}
     - target: {fileID: 3814042224936234562, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
       propertyPath: m_Name
       value: GameInstructionsUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 3814042225449082923, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
-      propertyPath: m_Color.a
-      value: 0.78431374
       objectReference: {fileID: 0}
     - target: {fileID: 4183650169199422260, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
       propertyPath: m_RootOrder
@@ -1208,6 +1204,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5473156497832070492, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1153587016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0cafd1fc672c7640bae78deba3babdf, type: 3}
 --- !u!4 &297741848969838998 stripped
